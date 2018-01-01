@@ -35,8 +35,4 @@ public class Player_Movement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 3 * speed);
         }
 	}
-    void LateUpdate
-    {
-        camera.main.transform.position.y = 1.0;
-    }
 }
