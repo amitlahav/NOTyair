@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boundary_Behavior : MonoBehaviour {
 
-     void OnTriggerExit(Collider Bolt)
+     void OnTriggerExit2D(Collider2D Bolt)
     {
         Destroy(Bolt.gameObject);
     }

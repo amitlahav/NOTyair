@@ -10,10 +10,9 @@ public class Mover : MonoBehaviour
     {
         rb.velocity = transform.right * speed;
     }
-    void OnCollisionEnter2D(Collision2D Collision)
+    /*void OnCollisionEnter2D(Collision2D Collision)
     {
-        Debug.Log("x");
         Destroy(Collision.otherCollider.gameObject);
         Destroy(Collision.gameObject);
-    }
+    }*/
 }
