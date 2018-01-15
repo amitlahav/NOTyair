@@ -2,11 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyMovement : MonoBehaviour {
+public class EnemyMovement : MonoBehaviour 
+{
+    public float speed;
+    private Rigidbody2D rb;
 
-
-    public void Update()
+    void Start()
     {
-        
+        rb = GetComponent<Rigidbody2D>();
+
+    }
+    public void Update()// moving towoard player
+    {
+        if (GameObject.FindWithTag("Player").transform.position.x < rb.position.x)
+        {
+            rb.velocity = new Vector2(-5 * speed, rb.velocity.y);
+        }
+        else
+        {
+            rb.velocity = new Vector2(5 * speed, rb.velocity.y);
+        }
     }
 }
