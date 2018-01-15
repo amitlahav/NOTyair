@@ -13,6 +13,8 @@ public class Player_Movement : MonoBehaviour
     public Transform Leftshotspawn;
     public GameObject Spooned;
     public Transform SpoonPoint;
+    public float timechange;
+    private float timeleft;
     private float nextfire;
     public float FireRate;
     private int LastKey = 0;
@@ -23,6 +25,7 @@ public class Player_Movement : MonoBehaviour
 	}
     void Update()
     {
+        timeleft -= Time.deltaTime;
         if (Input.GetButton("Fire1")&& Time.time > nextfire)
         {
             nextfire = Time.time + FireRate;
@@ -31,9 +34,10 @@ public class Player_Movement : MonoBehaviour
             if (LastKey == LEFT)
             Instantiate(original: LeftShot, position: Leftshotspawn.position, rotation:Leftshotspawn.rotation);
         }
-        if (1 == 1)
+        if (timeleft < 0)
         {
             Instantiate(original: Spooned, position: SpoonPoint.position, rotation: SpoonPoint.rotation);
+            timeleft = timechange;
         }
     }
     void FixedUpdate () 
