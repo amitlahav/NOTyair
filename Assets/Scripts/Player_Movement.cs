@@ -11,6 +11,8 @@ public class Player_Movement : MonoBehaviour
     public Transform Rightshotspawn;
     public GameObject LeftShot;
     public Transform Leftshotspawn;
+    public GameObject Spooned;
+    public Transform SpoonPoint;
     private float nextfire;
     public float FireRate;
     private int LastKey = 0;
@@ -28,8 +30,10 @@ public class Player_Movement : MonoBehaviour
             Instantiate(original:Rightshot,position: Rightshotspawn.position,rotation: Rightshotspawn.rotation);
             if (LastKey == LEFT)
             Instantiate(original: LeftShot, position: Leftshotspawn.position, rotation:Leftshotspawn.rotation);
-
-            
+        }
+        if (1 == 1)
+        {
+            Instantiate(original: Spooned, position: SpoonPoint.position, rotation: SpoonPoint.rotation);
         }
     }
     void FixedUpdate () 
