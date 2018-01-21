@@ -12,7 +12,6 @@ public class Health_System_Enemies : MonoBehaviour {
         if (collision.gameObject.tag == "Bolt" && Health == 3)
         {
             Destroy(collision.collider.gameObject);
-            Debug.Log("-Health");
             Health--;
             this.gameObject.GetComponent<SpriteRenderer>().sprite = MidHP;
 
@@ -21,13 +20,11 @@ public class Health_System_Enemies : MonoBehaviour {
         {
             Destroy(collision.collider.gameObject);
             Health--;
-            Debug.Log("-2Health");
             this.gameObject.GetComponent<SpriteRenderer>().sprite = FinalHP;
         }
         else if (collision.gameObject.tag == "Bolt" && Health == 1)
         {
             Destroy(collision.collider.gameObject);
-            Debug.Log("-3Health");
             Destroy(this.gameObject);
         }
     }

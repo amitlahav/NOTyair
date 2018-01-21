@@ -1,45 +1,50 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Health_System_Player : MonoBehaviour {
     public int Health = 3;// Player Health Points
-    public float invincibleTimeAfterHurt = 0.5f;
     private Rigidbody2D rb;
-    Animation myanim;
     public float speed;
     public float push;
+
+    public bool Invincible = false;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.collider.gameObject.tag=="Enemy"&& Health != 1)
-        {
-            Health--;
-            Invincible(invincibleTimeAfterHurt);
-            rb.AddForce(transform.up * speed);
-            rb.AddForce(-transform.right * push);
-        }
-        else if (Health == 1)
-        {
-            Application.LoadLevel("Prototype");
-            
-        }
 
-    }
-    private void Invincible(float TimeInvincible)
+    private void OnCollisionStay2D(Collision2D collision)
     {
-        while (true)
+        if (!Invincible)
         {
-            TimeInvincible -= Time.deltaTime;
-            if (TimeInvincible < 0)
+            if (collision.collider.gameObject.tag == "Enemy" && Health != 0)
             {
-                return;
+                Health--;
+                HealthManager.RemoveHealth(1);
+                if (Health != 0)
+                {
+                    rb.AddForce(transform.up * speed);
+                    rb.AddForce(-transform.right * push);
+                }
+                Invincible = true;
+                Invoke("resetinvulnerability", 1); 
+
             }
+
         }
     }
-    
+    private void Update()
+    {
+        if (Health == 0)
+        SceneManager.LoadScene(Consts.PROTOTYPE);
+    }
+    void resetinvulnerability()
+    {
+        Invincible = false;
+    }
+
+
+
 }
