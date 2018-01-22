@@ -15,4 +15,8 @@ public class LeftMover : MonoBehaviour {
         Destroy(Collision.otherCollider.gameObject);
         Destroy(Collision.gameObject);
     }*/
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(rb.gameObject);
+    }
 }

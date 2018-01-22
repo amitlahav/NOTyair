@@ -17,6 +17,7 @@ public class Player_Movement : MonoBehaviour
     private float timeleft;
     private float nextfire;
     public float FireRate;
+    private float moveVelocity;
     private int LastKey = 0;
 	void Start () 
     {
@@ -42,24 +43,21 @@ public class Player_Movement : MonoBehaviour
     }
     void FixedUpdate () 
     {
+        moveVelocity = 0f;
+
 		if (Input.GetKey("d"))
         {
-            rb.velocity = new Vector2(5 * speed, rb.velocity.y);
+            //rb.velocity = new Vector2(5 * speed, rb.velocity.y);
+            moveVelocity = speed * 5;
             LastKey = 0;
         }
         if (Input.GetKey("a"))
         {
-            rb.velocity = new Vector2(-5 * speed, rb.velocity.y);
+            //rb.velocity = new Vector2(-5 * speed, rb.velocity.y);
+            moveVelocity = speed * -5;
             LastKey = 1;
         }
-        if (Input.GetKeyUp("d"))
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
-        if (Input.GetKeyUp("a"))
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }
+        rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
         if (Input.GetKeyDown("w") && rb.velocity.y ==  0)
         {
             rb.velocity = new Vector2(rb.velocity.x, 3 * speed);
