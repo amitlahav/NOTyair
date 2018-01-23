@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Health_System_Player : MonoBehaviour {
-    public int Health = 3;// Player Health Points
+    public  int MaxHealth;// Player Health Points
+    public int CurrentHealth;
     private Rigidbody2D rb;
     public float speed;
     public float push;
@@ -12,18 +13,18 @@ public class Health_System_Player : MonoBehaviour {
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        CurrentHealth = MaxHealth;
     }
 
     private void OnCollisionStay2D(Collision2D collision)
     {
         if (!Invincible)
         {
-            if (collision.collider.gameObject.tag == "Enemy" && Health != 0)
+            if (collision.collider.gameObject.tag == "Enemy" && CurrentHealth != 0)
             {
-                Health--;
+                CurrentHealth--;
                 HealthManager.RemoveHealth(1);
-                if (Health != 0)
+                if (CurrentHealth != 0)
                 {
                     rb.AddForce(transform.up * speed);
                     rb.AddForce(-transform.right * push);
@@ -37,7 +38,7 @@ public class Health_System_Player : MonoBehaviour {
     }
     private void Update()
     {
-        if (Health == 0)
+        if (CurrentHealth == 0)
         SceneManager.LoadScene(Consts.PROTOTYPE);
     }
     void resetinvulnerability()
