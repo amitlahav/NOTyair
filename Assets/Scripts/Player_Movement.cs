@@ -37,11 +37,13 @@ public class Player_Movement : MonoBehaviour
             Instantiate(original:Rightshot,position: Rightshotspawn.position,rotation: Rightshotspawn.rotation);
             if (LastKey == LEFT)
             Instantiate(original: LeftShot, position: Leftshotspawn.position, rotation:Leftshotspawn.rotation);
+            anim.SetFloat("Attack", 2.0f);
         }
         if (timeleft < 0)
         {
             Instantiate(original: Spooned, position: SpoonPoint.position, rotation: SpoonPoint.rotation);
             timeleft = timechange;
+            anim.SetFloat("Attack", 0.0f);
         }
     }
     void FixedUpdate () 

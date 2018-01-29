@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class AnimationShortcut : MonoBehaviour {
     private SpriteRenderer Staff;
-
 	void Start () {
         Staff = GetComponent<SpriteRenderer>();
 	}
@@ -12,7 +11,6 @@ public class AnimationShortcut : MonoBehaviour {
 	void FixedUpdate () {
         if (Input.GetKey("d"))
         {
-
             Staff.flipX = false;
         }
         if (Input.GetKey("a"))
