@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Bolt
   - Enemy
+  - Health Pot
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Background
   - PLayer
   - Enemies
-  - 
+  - Bonus Items
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Enemies
     uniqueID: 2026923057
+    locked: 0
+  - name: Bonus Items
+    uniqueID: 2092495535
     locked: 0

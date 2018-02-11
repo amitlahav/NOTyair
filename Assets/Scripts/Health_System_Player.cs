@@ -8,7 +8,6 @@ public class Health_System_Player : MonoBehaviour {
     private Rigidbody2D rb;
     public float speed;
     public float push;
-
     public bool Invincible = false;
     void Start()
     {
@@ -31,9 +30,7 @@ public class Health_System_Player : MonoBehaviour {
                 }
                 Invincible = true;
                 Invoke("resetinvulnerability", 1); 
-
-            }
-
+            }       
         }
     }
     private void Update()
