@@ -79,8 +79,4 @@ public class Player_Movement : MonoBehaviour
         }
         anim.SetFloat("Move", Input.GetAxisRaw("Horizontal"));
     }
-    private void OnTriggerStay2D(Collider2D collider)
-    {
-
-    }
 }
