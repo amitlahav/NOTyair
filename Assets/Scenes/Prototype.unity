@@ -1598,8 +1598,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1582523629}
   - component: {fileID: 1582523627}
-  - component: {fileID: 1582523628}
   - component: {fileID: 1582523630}
+  - component: {fileID: 1582523628}
   m_Layer: 11
   m_Name: HealthPot
   m_TagString: Health Pot
@@ -1660,7 +1660,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -1674,7 +1674,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.73, y: 0.89}
+  m_Size: {x: 0.36, y: 0.51}
   m_EdgeRadius: 0
 --- !u!4 &1582523629
 Transform:
@@ -1682,13 +1682,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1582523626}
-  m_LocalRotation: {x: 0, y: 0, z: 0.0008726948, w: 0.99999964}
-  m_LocalPosition: {x: -80.97, y: -3.89, z: 0}
-  m_LocalScale: {x: 4.021424, y: 3.610461, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -81.738, y: -4.05, z: 0}
+  m_LocalScale: {x: 3.7386248, y: 3.1844442, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.1}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1582523630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1697,9 +1697,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1582523626}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7348ff42ed5044e49b4750eaff466fc9, type: 3}
+  m_Script: {fileID: 11500000, guid: 5b5a28934e8cfd5448a7a2a8c1fff87d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HealthPotValue: 1
 --- !u!1 &1689487944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,7 +2348,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 3
-  CurrentHealth: 0
   speed: 200
   push: 40
   Invincible: 0
