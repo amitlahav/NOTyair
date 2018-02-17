@@ -5,10 +5,10 @@ using UnityEngine;
 public class Health_System_Enemies : MonoBehaviour {
     public Sprite MidHP;
     public Sprite FinalHP;
-    public int Health = 3;
+    public int Health;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-
+        /*
         if (collision.gameObject.tag == "Bolt" && Health == 3)
         {
             Destroy(collision.collider.gameObject);
@@ -26,7 +26,20 @@ public class Health_System_Enemies : MonoBehaviour {
         {
             Destroy(collision.collider.gameObject);
             Destroy(this.gameObject);
+        }*/
+        if (collision.gameObject.tag == "Bolt")
+        {
+            Debug.Log("touch");
+            Debug.Log(WeaponsBehaviour.Damage);
         }
+        if (Health<=0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    void HealthToRemove(int HealthToRemove)
+    {
+        Health -= HealthToRemove;
     }
 
 }

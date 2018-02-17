@@ -102,7 +102,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MidHP: {fileID: 21300000, guid: 6bf4764e4ea13c4498b31107c6fe3884, type: 3}
   FinalHP: {fileID: 21300000, guid: 14aff572402034645a67ef755886bbae, type: 3}
-  Health: 3
+  Health: 100
 --- !u!114 &114507829869401910
 MonoBehaviour:
   m_ObjectHideFlags: 1
