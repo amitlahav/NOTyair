@@ -12,7 +12,7 @@ public class WeaponsBehaviour : MonoBehaviour
     public Transform Leftshotspawn;
     public GameObject Rightshot;
     public Transform Rightshotspawn;
-    public static int Damage;
+    public int Damage;
     private SpriteRenderer WeaponSprite;
     void Start()
     {
@@ -26,10 +26,14 @@ public class WeaponsBehaviour : MonoBehaviour
             nextfire = Time.time + FireRate;
             if (Player_Movement.LastKey == RIGHT)
             {
-                Instantiate(original: Rightshot, position: Rightshotspawn.position, rotation: Rightshotspawn.rotation);
+                GameObject BoltRight = Instantiate(original: Rightshot, position: Rightshotspawn.position, rotation: Rightshotspawn.rotation);
+                BoltRight.GetComponent<Mover>().Damage = Damage;
             }
             if (Player_Movement.LastKey == LEFT)
-                Instantiate(original: LeftShot, position: Leftshotspawn.position, rotation: Leftshotspawn.rotation);
+            {
+               GameObject BoltLeft = Instantiate(original: LeftShot, position: Leftshotspawn.position, rotation: Leftshotspawn.rotation);
+               BoltLeft.GetComponent<LeftMover>().Damage = Damage;
+            }
         }
         if (Input.GetKey("a"))
         {
@@ -39,5 +43,9 @@ public class WeaponsBehaviour : MonoBehaviour
         {
             WeaponSprite.flipX = false;
         }
+    }
+   public int GetDamage()
+    {
+        return Damage;
     }
 }

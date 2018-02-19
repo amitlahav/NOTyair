@@ -6,6 +6,7 @@ public class LeftMover : MonoBehaviour {
 
     private Rigidbody2D rb;
     public float speed;
+    public int Damage;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

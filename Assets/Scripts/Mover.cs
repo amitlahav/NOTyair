@@ -5,7 +5,8 @@ using UnityEngine;
 public class Mover : MonoBehaviour
 {
     private Rigidbody2D rb;
-    public float speed; 
+    public float speed;
+    public int Damage;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
