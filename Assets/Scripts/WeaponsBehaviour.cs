@@ -12,11 +12,16 @@ public class WeaponsBehaviour : MonoBehaviour
     public Transform Leftshotspawn;
     public GameObject Rightshot;
     public Transform Rightshotspawn;
-    public static int Damage = 20;
+    public static int Damage;
+    private SpriteRenderer WeaponSprite;
+    void Start()
+    {
+        WeaponSprite = GetComponent<SpriteRenderer>();
+    }
     void Update()
     {
         timeleft -= Time.deltaTime;
-        if (Input.GetButton("Fire1") && Time.time > nextfire)
+        if (Input.GetKeyDown("l") && Time.time > nextfire)
         {
             nextfire = Time.time + FireRate;
             if (Player_Movement.LastKey == RIGHT)
@@ -25,6 +30,14 @@ public class WeaponsBehaviour : MonoBehaviour
             }
             if (Player_Movement.LastKey == LEFT)
                 Instantiate(original: LeftShot, position: Leftshotspawn.position, rotation: Leftshotspawn.rotation);
+        }
+        if (Input.GetKey("a"))
+        {
+            WeaponSprite.flipX = true;
+        }
+        if (Input.GetKey("d"))
+        {
+            WeaponSprite.flipX = false;
         }
     }
 }
