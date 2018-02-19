@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 70519287572538160}
   m_Layer: 0
   m_Name: LeftBolt
-  m_TagString: Bolt
+  m_TagString: LeftBolt
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,3 +161,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 15
+  Damage: 0

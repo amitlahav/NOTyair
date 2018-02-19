@@ -141,7 +141,7 @@ Transform:
   m_LocalScale: {x: 1.434801, y: 1.0896252, z: 1}
   m_Children: []
   m_Father: {fileID: 1007210257}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &39958117
 SpriteRenderer:
@@ -203,6 +203,7 @@ MonoBehaviour:
   Leftshotspawn: {fileID: 852515303}
   Rightshot: {fileID: 1845709222321914, guid: 7035e4213a1e4c7419585acb0579e678, type: 2}
   Rightshotspawn: {fileID: 731888066}
+  Damage: 20
 --- !u!1 &48920691
 GameObject:
   m_ObjectHideFlags: 0
@@ -418,9 +419,10 @@ GameObject:
   m_Component:
   - component: {fileID: 130830413}
   - component: {fileID: 130830414}
+  - component: {fileID: 130830415}
   m_Layer: 0
   m_Name: Staff
-  m_TagString: Untagged
+  m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -436,7 +438,7 @@ Transform:
   m_LocalScale: {x: 4.187924, y: 3.4353614, z: 1}
   m_Children: []
   m_Father: {fileID: 1007210257}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &130830414
 SpriteRenderer:
@@ -482,6 +484,23 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!114 &130830415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 130830412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8c45a46c92e2354aaa639cd9583c54b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FireRate: 0.35
+  LeftShot: {fileID: 1198248798293776, guid: 902cac213f2fa9245b656c107482825e, type: 2}
+  Leftshotspawn: {fileID: 852515303}
+  Rightshot: {fileID: 1704089509987362, guid: 0f7d3447aaf6c4441ae0a8e387453b2c, type: 2}
+  Rightshotspawn: {fileID: 731888066}
+  Damage: 40
 --- !u!1 &493097377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1173,7 +1192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1007210257}
   m_Layer: 0
-  m_Name: Weapon
+  m_Name: WeaponHeld
   m_TagString: Weapon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1189,8 +1208,8 @@ Transform:
   m_LocalPosition: {x: -0.02, y: -0.092, z: 0.01950963}
   m_LocalScale: {x: 0.15570447, y: 0.19120735, z: 1.0576664}
   m_Children:
-  - {fileID: 39958116}
   - {fileID: 130830413}
+  - {fileID: 39958116}
   m_Father: {fileID: 1851245620}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.05}

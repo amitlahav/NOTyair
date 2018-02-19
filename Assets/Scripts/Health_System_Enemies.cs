@@ -10,7 +10,7 @@ public class Health_System_Enemies : MonoBehaviour {
         {
             Health -= collision.gameObject.GetComponent<Mover>().Damage;   
         }
-        if (collision.gameObject.tag == "BoltLeft")
+        if (collision.gameObject.tag == "LeftBolt")
         {
             Health -= collision.gameObject.GetComponent<LeftMover>().Damage;
         }
