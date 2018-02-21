@@ -14,6 +14,7 @@ public class WeaponsBehaviour : MonoBehaviour
     public Transform Rightshotspawn;
     public int Damage;
     private SpriteRenderer WeaponSprite;
+    public bool WeaponOwned;
     void Start()
     {
         WeaponSprite = GetComponent<SpriteRenderer>();
@@ -43,9 +44,5 @@ public class WeaponsBehaviour : MonoBehaviour
         {
             WeaponSprite.flipX = false;
         }
-    }
-   public int GetDamage()
-    {
-        return Damage;
     }
 }

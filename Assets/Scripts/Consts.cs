@@ -5,5 +5,5 @@ using UnityEngine;
 public class Consts : MonoBehaviour
 {
     public static int PROTOTYPE = 1;
-
+    public static int NUMBER_WEAPONS = 2;
 }

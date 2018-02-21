@@ -129,7 +129,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &39958116
 Transform:
   m_ObjectHideFlags: 0
@@ -203,7 +203,8 @@ MonoBehaviour:
   Leftshotspawn: {fileID: 852515303}
   Rightshot: {fileID: 1845709222321914, guid: 7035e4213a1e4c7419585acb0579e678, type: 2}
   Rightshotspawn: {fileID: 731888066}
-  Damage: 20
+  Damage: 12
+  WeaponOwned: 0
 --- !u!1 &48920691
 GameObject:
   m_ObjectHideFlags: 0
@@ -495,12 +496,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c45a46c92e2354aaa639cd9583c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FireRate: 0.35
+  FireRate: 0.4
   LeftShot: {fileID: 1198248798293776, guid: 902cac213f2fa9245b656c107482825e, type: 2}
   Leftshotspawn: {fileID: 852515303}
   Rightshot: {fileID: 1704089509987362, guid: 0f7d3447aaf6c4441ae0a8e387453b2c, type: 2}
   Rightshotspawn: {fileID: 731888066}
   Damage: 40
+  WeaponOwned: 0
 --- !u!1 &493097377
 GameObject:
   m_ObjectHideFlags: 0
@@ -740,7 +742,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!212 &627320933
 SpriteRenderer:
@@ -1191,6 +1193,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1007210257}
+  - component: {fileID: 1007210258}
   m_Layer: 0
   m_Name: WeaponHeld
   m_TagString: Weapon
@@ -1213,6 +1216,18 @@ Transform:
   m_Father: {fileID: 1851245620}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.05}
+--- !u!114 &1007210258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1007210256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02964f8758af65d43a974b186ef71eb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SelectedWeapon: 0
 --- !u!1 &1055313312
 GameObject:
   m_ObjectHideFlags: 0

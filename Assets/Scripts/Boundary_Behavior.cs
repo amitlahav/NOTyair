@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Boundary_Behavior : MonoBehaviour {
 
@@ -9,7 +10,7 @@ public class Boundary_Behavior : MonoBehaviour {
         Destroy(Bolt.gameObject);
         if (gameObject.tag == "Player")
         {
-            Application.LoadLevel("Prototype");
+            SceneManager.LoadScene("Prototype");
         }
     }
 }
