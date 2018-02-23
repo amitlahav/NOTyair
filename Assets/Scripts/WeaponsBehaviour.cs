@@ -15,6 +15,7 @@ public class WeaponsBehaviour : MonoBehaviour
     public int Damage;
     private SpriteRenderer WeaponSprite;
     public bool WeaponOwned;
+    public int Weapon_Index;
     void Start()
     {
         WeaponSprite = GetComponent<SpriteRenderer>();

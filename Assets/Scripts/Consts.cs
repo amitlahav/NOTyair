@@ -6,4 +6,6 @@ public class Consts : MonoBehaviour
 {
     public static int PROTOTYPE = 1;
     public static int NUMBER_WEAPONS = 2;
+    public static int Ak_Weapon_Index = 1;
+    public static int Wand_Weapon_Index = 0;
 }

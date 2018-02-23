@@ -4,39 +4,54 @@ using UnityEngine;
 
 public class WeaponSwitch : MonoBehaviour {
     public int SelectedWeapon = 0;
+    public List<Transform> MainWeapon = new List<Transform>();// list of all transforms in weaponheld
     int i = 0;
-    List<Transform> MainWeapon = new List<Transform>();
     void Start()
     {
         foreach (Transform Weapon in transform)
         {
-            MainWeapon.Add(Weapon);
-            i++;
+            MainWeapon.Add(Weapon);// adding weapons to list
         }
-        MainWeapon[0].GetComponent<WeaponsBehaviour>().WeaponOwned = true;
-        SelectWeapon();
+        MainWeapon[0].GetComponent<WeaponsBehaviour>().WeaponOwned = true;// determaning first weapon as main weapon and declaring him as owned
+        SelectWeapon();// selecting first weapon
     }
     void Update()
     {
-        if (!MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().WeaponOwned)
+        if (!MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().WeaponOwned)// selected first weapon as held weapon if not weapon is currently selected
         {
             SelectedWeapon = 0;
         }
-        if (SelectedWeapon <= MainWeapon.Count - 1)
+        if (SelectedWeapon <= MainWeapon.Count - 1)//keeping the list boundry
         {
-            if (Input.GetKeyDown("p") && MainWeapon[SelectedWeapon+1].GetComponent<WeaponsBehaviour>().WeaponOwned)
+            if (Input.GetKeyDown("p"))// Looking for the next weapon in the list MainWeapon - if found equliazing SelectedWeapon to the location of that next owned weapon 
             {
-                SelectedWeapon++;
+                int NextWeapon = SelectedWeapon+1;
+                Debug.Log(MainWeapon.Count);
+                for (int i = NextWeapon; i<MainWeapon.Count;i ++)
+                {
+                    if (MainWeapon[i].GetComponent<WeaponsBehaviour>().WeaponOwned)
+                    {
+                        SelectedWeapon = i;break;
+                    }
+                }
             }
         }
-            if (Input.GetKeyDown("o") && SelectedWeapon > 0)
+            if (Input.GetKeyDown("o") && SelectedWeapon > 0)// same but for previous
             {
-                SelectedWeapon--;
+            int PreviousWeapon = SelectedWeapon - 1;
+            for (int i = PreviousWeapon; i >= 0; i--)
+            {
+                if (MainWeapon[i].GetComponent<WeaponsBehaviour>().WeaponOwned)
+                {
+                    
+                    SelectedWeapon = i; break;
+                }
+            }
             }
 
-        SelectWeapon();
+        SelectWeapon();// select weapon
     }
-    void SelectWeapon()
+    public void SelectWeapon()// going over all weapons in the the transform and selecting the weapon equals to the int "SelectedWeapon"
     {
         int i = 0;
         foreach(Transform Weapon in transform)

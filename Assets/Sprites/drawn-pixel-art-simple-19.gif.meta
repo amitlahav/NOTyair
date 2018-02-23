@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 0841910b60ac19c458b045e1c632241b
-timeCreated: 1518887070
+timeCreated: 1519387963
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -14,7 +14,7 @@ TextureImporter:
     21300014: drawn-pixel-art-simple-19_7
     21300016: drawn-pixel-art-simple-19_8
     21300018: drawn-pixel-art-simple-19_9
-    21300020: drawn-pixel-art-simple-19_10
+    21300020: M16
     21300022: drawn-pixel-art-simple-19_11
     21300024: drawn-pixel-art-simple-19_12
     21300026: drawn-pixel-art-simple-19_13
@@ -236,7 +236,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: drawn-pixel-art-simple-19_10
+      name: M16
       rect:
         serializedVersion: 2
         x: 230

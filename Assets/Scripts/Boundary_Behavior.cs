@@ -7,10 +7,11 @@ public class Boundary_Behavior : MonoBehaviour {
 
      void OnTriggerExit2D(Collider2D Bolt)
     {
-        Destroy(Bolt.gameObject);
+
         if (gameObject.tag == "Player")
         {
             SceneManager.LoadScene("Prototype");
         }
+        Destroy(Bolt.gameObject);
     }
 }
