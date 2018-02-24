@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Weapon_Pickup : MonoBehaviour {
     public int Weapon_Index;
-    List<Transform> Weapons = new List<Transform>();
     Transform WeaponHeld;
+    int SelectedWeapon = 0;
     void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKeyDown("z"))
@@ -26,6 +26,22 @@ public class Weapon_Pickup : MonoBehaviour {
                 }
             }
         }  
+    }
+    public void SelectWeapon()// going over all weapons in the the transform and selecting the weapon equals to the int "SelectedWeapon"
+    {
+        int i = 0;
+        foreach (Transform Weapon in WeaponHeld)
+        {
+            if (i == SelectedWeapon && Weapon.GetComponent<WeaponsBehaviour>().WeaponOwned)
+            {
+                Weapon.gameObject.SetActive(true);
+            }
+            else
+            {
+                Weapon.gameObject.SetActive(false);
+            }
+            i++;
+        }
     }
 }
 

@@ -202,6 +202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c45a46c92e2354aaa639cd9583c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ReloadTime: 1.5
   FireRate: 0.1
   LeftShot: {fileID: 1915977718864764, guid: 479be02c0457b80458f420e02bab495e, type: 2}
   Leftshotspawn: {fileID: 852515303}
@@ -210,6 +211,9 @@ MonoBehaviour:
   Damage: 12
   WeaponOwned: 0
   Weapon_Index: 1
+  Ammo: 90
+  MaxMagazine: 30
+  Magazine: 0
 --- !u!1 &48920691
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +505,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c45a46c92e2354aaa639cd9583c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ReloadTime: 1.5
   FireRate: 0.4
   LeftShot: {fileID: 1198248798293776, guid: 902cac213f2fa9245b656c107482825e, type: 2}
   Leftshotspawn: {fileID: 852515303}
@@ -509,6 +514,9 @@ MonoBehaviour:
   Damage: 40
   WeaponOwned: 0
   Weapon_Index: 0
+  Ammo: 36
+  MaxMagazine: 6
+  Magazine: 0
 --- !u!1 &493097377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1070,7 +1078,18 @@ MonoBehaviour:
   m_Value: 3
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &852515302
@@ -1319,6 +1338,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SelectedWeapon: 0
+  Ammo: 0
+  Magazine: 0
   MainWeapon: []
 --- !u!1 &1055313312
 GameObject:
@@ -1696,6 +1717,21 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114001848886810582, guid: c145d5bb7f24ac747b1608ea644748a0,
+        type: 2}
+      propertyPath: Ammo
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001848886810582, guid: c145d5bb7f24ac747b1608ea644748a0,
+        type: 2}
+      propertyPath: MaxMagazine
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 114001848886810582, guid: c145d5bb7f24ac747b1608ea644748a0,
+        type: 2}
+      propertyPath: ReloadTime
+      value: 1.5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114520314189995080, guid: c145d5bb7f24ac747b1608ea644748a0, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: c145d5bb7f24ac747b1608ea644748a0, type: 2}
@@ -1953,6 +1989,80 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPotValue: 1
+--- !u!1 &1625652779
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1625652780}
+  - component: {fileID: 1625652782}
+  - component: {fileID: 1625652781}
+  m_Layer: 5
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1625652780
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625652779}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2063889491}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -41, y: 43}
+  m_SizeDelta: {x: 223.8, y: 71.9}
+  m_Pivot: {x: 0.5, y: 0.49999994}
+--- !u!114 &1625652781
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625652779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 24
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Magazine/Ammo
+--- !u!222 &1625652782
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1625652779}
 --- !u!1 &1689487944
 GameObject:
   m_ObjectHideFlags: 0
@@ -2639,6 +2749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c45a46c92e2354aaa639cd9583c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ReloadTime: 1.5
   FireRate: 0.1
   LeftShot: {fileID: 1140811297983270, guid: 61073d5a5a21df240aba2aa2590bb40d, type: 2}
   Leftshotspawn: {fileID: 852515303}
@@ -2647,6 +2758,9 @@ MonoBehaviour:
   Damage: 14
   WeaponOwned: 0
   Weapon_Index: 2
+  Ammo: 90
+  MaxMagazine: 25
+  Magazine: 0
 --- !u!212 &1865694329
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2808,6 +2922,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 778940383}
+  - {fileID: 1625652780}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2829,3 +2944,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HealthBar: {fileID: 778940384}
   playerHealth: {fileID: 1851245622}
+  AmmoValue: {fileID: 1625652781}
+  HeldWeapon: {fileID: 1007210258}
