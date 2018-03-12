@@ -8,8 +8,12 @@ public class Main_Menu : MonoBehaviour {
     {
         SceneManager.LoadScene(Consts.PROTOTYPE);
     }
-    public void QuitGame()
+    public class ExampleClass : MonoBehaviour
     {
-        Application.Quit();
+        void Update()
+        {
+            if (Input.GetKey("escape"))
+                Application.Quit();
+        }
     }
 }
