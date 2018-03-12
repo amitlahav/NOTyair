@@ -2097,7 +2097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPotValue: 1
-  PlayerHealth: {fileID: 0}
+  PlayerHealth: {fileID: 1851245622}
 --- !u!1 &1625652779
 GameObject:
   m_ObjectHideFlags: 0

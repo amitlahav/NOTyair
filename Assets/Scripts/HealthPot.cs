@@ -16,7 +16,7 @@ public class HealthPot : MonoBehaviour {
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    /*private void OnTriggerEnter2D(Collider2D other)
      {
          if (other.GetComponent<Player_Movement>() == null)
              return;
@@ -35,5 +35,5 @@ public class HealthPot : MonoBehaviour {
             PlayerHealth.CurrentHealth += HealthPotValue;
              Destroy(gameObject);
          }
-     }
+     }*/
 }
