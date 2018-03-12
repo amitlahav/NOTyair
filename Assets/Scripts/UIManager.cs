@@ -12,7 +12,7 @@ public class UIManager : MonoBehaviour {
     }
     public void Update () {
         HealthBar.maxValue = playerHealth.MaxHealth;
-        HealthBar.value = Health_System_Player.CurrentHealth;
+        HealthBar.value = playerHealth.CurrentHealth;
         AmmoValue.text = "Ammo: "+HeldWeapon.Magazine+"/"+HeldWeapon.Ammo;
 	}
 }
