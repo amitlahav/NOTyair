@@ -52,7 +52,7 @@ public class WeaponsBehaviour : MonoBehaviour
             nextfire = Time.time + ReloadTime;
             Invoke("ReloadWeapon", ReloadTime);                
         }
-        if (Magazine == 0 && Ammo != 0 && Time.time > Reload_Time_Left)
+        if (Magazine == 0)
         {
             Reload_Time_Left = Time.time + ReloadTime;
             nextfire = Time.time + ReloadTime;
