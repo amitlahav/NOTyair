@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class Health_System_Player : MonoBehaviour {
-    public  int MaxHealth;// Player Health Points
-    public static int CurrentHealth;
+    public int MaxHealth;// Player Health Points
+    public int CurrentHealth;
     private Rigidbody2D rb;
     public float speed;
     public float push;
@@ -32,7 +32,6 @@ public class Health_System_Player : MonoBehaviour {
             }       
         }
     }
-
     private void Update()
     {
         if (CurrentHealth == 0)
@@ -42,14 +41,4 @@ public class Health_System_Player : MonoBehaviour {
     {
         Invincible = false;
     }
-    public static void AddHealth(int HealthToAdd)
-    {
-        CurrentHealth += HealthToAdd;
-    }
-    public static void RemoveHealth(int HealthToRemove)
-    {
-        CurrentHealth -= HealthToRemove;
-    }
-
-
 }
