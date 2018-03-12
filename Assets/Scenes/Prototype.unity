@@ -2097,6 +2097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPotValue: 1
+  PlayerHealth: {fileID: 0}
 --- !u!1 &1625652779
 GameObject:
   m_ObjectHideFlags: 0
@@ -2813,6 +2814,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 3
+  CurrentHealth: 0
   speed: 200
   push: 40
   Invincible: 0
