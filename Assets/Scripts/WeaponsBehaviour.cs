@@ -46,11 +46,17 @@ public class WeaponsBehaviour : MonoBehaviour
                 }
             }
         }
-        if (Input.GetKeyDown("r")&& Ammo !=0 &&Time.time>Reload_Time_Left)
+        if (Input.GetKeyDown("r") && Ammo !=0 && Time.time > Reload_Time_Left)
         {
             Reload_Time_Left = Time.time + ReloadTime;
             nextfire = Time.time + ReloadTime;
             Invoke("ReloadWeapon", ReloadTime);                
+        }
+        if (Magazine == 0)
+        {
+            Reload_Time_Left = Time.time + ReloadTime;
+            nextfire = Time.time + ReloadTime;
+            Invoke("ReloadWeapon", ReloadTime);    
         }
         if (Input.GetKey("a"))
         {
