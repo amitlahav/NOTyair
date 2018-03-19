@@ -14,7 +14,11 @@ public class Health_System_Enemies : MonoBehaviour {
         {
             Health -= collision.gameObject.GetComponent<LeftMover>().Damage;
         }
-        if (Health<=0)
+        if (Health<0)
+        {
+            Health = 0;
+        }
+        if (Health == 0)
         {
             Destroy(this.gameObject);
         }
