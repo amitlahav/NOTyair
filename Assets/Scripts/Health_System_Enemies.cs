@@ -17,6 +17,7 @@ public class Health_System_Enemies : MonoBehaviour {
         if (Health<=0)
         {
             Destroy(this.gameObject);
+            UIManager.Score += 50;
         }
     }
     void HealthToRemove(int HealthToRemove)
