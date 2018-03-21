@@ -6,9 +6,7 @@ public class UIManager : MonoBehaviour {
     public Slider HealthBar;
     public Health_System_Player playerHealth;
     public Text AmmoValue;
-    public Text GameScore;
     public WeaponSwitch HeldWeapon;
-    public static int Score;
     public void Start()
     {
     }
@@ -16,7 +14,5 @@ public class UIManager : MonoBehaviour {
         HealthBar.maxValue = playerHealth.MaxHealth;
         HealthBar.value = playerHealth.CurrentHealth;
         AmmoValue.text = "Ammo: "+HeldWeapon.Magazine+"/"+HeldWeapon.Ammo;
-        GameScore.text = "Score: " + Score;
-        
-    }
+	}
 }

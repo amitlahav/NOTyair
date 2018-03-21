@@ -8,7 +8,7 @@ public class Weapon_Pickup : MonoBehaviour {
     int SelectedWeapon = 0;
     void OnTriggerStay2D(Collider2D other)
     {
-        if (Input.GetKeyDown("z") && other.gameObject.tag == "Player")
+        if (Input.GetKeyDown("z"))
         {
             Destroy(gameObject);
             foreach (Transform Weapon in other.transform)// finding in the player transform the child "WeaponHeld"
@@ -22,7 +22,7 @@ public class Weapon_Pickup : MonoBehaviour {
             {
                 if (Weapon.GetComponent<WeaponsBehaviour>().Weapon_Index == Weapon_Index)
                 {
-                    Weapon.GetComponent<WeaponsBehaviour>().WeaponOwned = true; break;// declaring the weapon as owned
+                    Weapon.GetComponent<WeaponsBehaviour>().WeaponOwned = true;break;// declaring the weapon as owned
                 }
             }
         }  

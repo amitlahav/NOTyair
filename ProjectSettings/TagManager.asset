@@ -9,7 +9,6 @@ TagManager:
   - Health Pot
   - Weapon
   - LeftBolt
-  - UI
   layers:
   - Default
   - TransparentFX
