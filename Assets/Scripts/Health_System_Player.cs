@@ -35,7 +35,7 @@ public class Health_System_Player : MonoBehaviour {
     private void Update()
     {
         if (CurrentHealth == 0)
-        SceneManager.LoadScene(Consts.PROTOTYPE);
+        SceneManager.LoadScene(Consts.Current_Scene);
     }
     void resetinvulnerability()
     {

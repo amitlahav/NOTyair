@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 61349085062719752}
   - component: {fileID: 114274104975471910}
   - component: {fileID: 114507829869401910}
+  - component: {fileID: 114659487241970102}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Enemy
@@ -55,7 +56,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -100,8 +101,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a957ee2e445a8ed43a3c5be7bff626f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MidHP: {fileID: 21300000, guid: 6bf4764e4ea13c4498b31107c6fe3884, type: 3}
-  FinalHP: {fileID: 21300000, guid: 14aff572402034645a67ef755886bbae, type: 3}
   Health: 100
 --- !u!114 &114507829869401910
 MonoBehaviour:
@@ -115,6 +114,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 2
+--- !u!114 &114659487241970102
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1403827626093488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371fe3b5039d05e4ea0322c49429c79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212718959734112418
 SpriteRenderer:
   m_ObjectHideFlags: 1
