@@ -12,7 +12,7 @@ public class HealthPot : MonoBehaviour {
             return;
         if (Input.GetKeyDown("z"))
         {
-            PlayerHealth.CurrentHealth += HealthPotValue;
+            other.GetComponent<Health_System_Player>().CurrentHealth += HealthPotValue;
             Destroy(gameObject);
         }
     }

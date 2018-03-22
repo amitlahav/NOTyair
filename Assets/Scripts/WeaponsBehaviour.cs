@@ -21,6 +21,7 @@ public class WeaponsBehaviour : MonoBehaviour
     public int Ammo;
     public int MaxMagazine;
     public int Magazine;
+    public GameObject Fire;//particles
     void Start()
     {
         WeaponSprite = GetComponent<SpriteRenderer>();
@@ -37,11 +38,13 @@ public class WeaponsBehaviour : MonoBehaviour
                 if (Player_Movement.LastKey == RIGHT)
                 {
                     GameObject BoltRight = Instantiate(original: Rightshot, position: Rightshotspawn.position, rotation: Rightshotspawn.rotation);
+                    Instantiate(Fire, Rightshotspawn.position, Rightshotspawn.rotation);
                     BoltRight.GetComponent<Mover>().Damage = Damage;
                 }
                 if (Player_Movement.LastKey == LEFT)
                 {
                     GameObject BoltLeft = Instantiate(original: LeftShot, position: Leftshotspawn.position, rotation: Leftshotspawn.rotation);
+                    Instantiate(Fire, Leftshotspawn.position, Leftshotspawn.rotation);
                     BoltLeft.GetComponent<LeftMover>().Damage = Damage;
                 }
             }

@@ -19,8 +19,13 @@ public class Enemy_Behaviour : MonoBehaviour
                 DropChance = Random.Range(1, 100);
                 if (DropChance > 90)
                 {
-                    Instantiate(HealthPot, rb.transform.position, rb.transform.rotation);
+                ItemDrop(HealthPot);
                 }
             }
         }
-}
+        void ItemDrop(GameObject BonusItem)
+        {
+            Instantiate(BonusItem, transform.position = new Vector2(rb.position.x, -4.05f), rb.transform.rotation);
+        }
+    }
+

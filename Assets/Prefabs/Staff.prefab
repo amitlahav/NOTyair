@@ -52,12 +52,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8c45a46c92e2354aaa639cd9583c54b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ReloadTime: 0
   FireRate: 1
   LeftShot: {fileID: 1198248798293776, guid: 902cac213f2fa9245b656c107482825e, type: 2}
   Leftshotspawn: {fileID: 0}
   Rightshot: {fileID: 1704089509987362, guid: 0f7d3447aaf6c4441ae0a8e387453b2c, type: 2}
   Rightshotspawn: {fileID: 0}
   Damage: 50
+  WeaponOwned: 0
+  Weapon_Index: 0
+  Ammo: 0
+  MaxMagazine: 0
+  Magazine: 0
+  Fire: {fileID: 0}
 --- !u!212 &212617232414553116
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -92,7 +99,7 @@ SpriteRenderer:
   m_SortingLayerID: 493469653
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 0287d01b6b336be42ad03c3e8b3a114f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c3c0100bdb76934c982c31ca4bddb1a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

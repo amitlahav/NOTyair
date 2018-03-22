@@ -10,6 +10,7 @@ TagManager:
   - Weapon
   - LeftBolt
   - UI
+  - Chest
   layers:
   - Default
   - TransparentFX

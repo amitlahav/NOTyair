@@ -8,6 +8,8 @@ public class UIManager : MonoBehaviour {
     public Text AmmoValue;
     public Text GameScore;
     public WeaponSwitch HeldWeapon;
+    public Image WeaponSprite;
+    public WeaponSwitch WeaponImage;
     public static int Score;
     public void Start()
     {
@@ -17,6 +19,6 @@ public class UIManager : MonoBehaviour {
         HealthBar.value = playerHealth.CurrentHealth;
         AmmoValue.text = "Ammo: "+HeldWeapon.Magazine+"/"+HeldWeapon.Ammo;
         GameScore.text = "Score: " + Score;
-        
+        WeaponSprite.sprite = WeaponImage.MainWeapon[WeaponImage.SelectedWeapon].gameObject.GetComponent<SpriteRenderer>().sprite;
     }
 }

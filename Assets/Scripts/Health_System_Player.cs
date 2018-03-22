@@ -36,6 +36,9 @@ public class Health_System_Player : MonoBehaviour {
     {
         if (CurrentHealth == 0)
         SceneManager.LoadScene(Consts.Current_Scene);
+        if (CurrentHealth>MaxHealth)
+        CurrentHealth = MaxHealth;
+        
     }
     void resetinvulnerability()
     {
