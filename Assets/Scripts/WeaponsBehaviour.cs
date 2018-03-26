@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponsBehaviour : MonoBehaviour
 {
     const int RIGHT = 0, LEFT = 1;
-    private float nextfire;
+    private float nextfire = 0;
     private float Reload_Time_Left;
     private float timeleft;
     public float ReloadTime;
