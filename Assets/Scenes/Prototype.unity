@@ -356,6 +356,7 @@ GameObject:
   - component: {fileID: 370201188}
   - component: {fileID: 370201187}
   - component: {fileID: 370201186}
+  - component: {fileID: 370201189}
   m_Layer: 10
   m_Name: Slime_Enemy
   m_TagString: Enemy
@@ -456,7 +457,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370201180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.79, y: -1.7, z: -0.1328125}
+  m_LocalPosition: {x: -45.29, y: -3.25, z: -0.1328125}
   m_LocalScale: {x: 7.8980184, y: 8.726874, z: 1}
   m_Children:
   - {fileID: 878108266}
@@ -482,7 +483,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 4
+  m_Constraints: 6
 --- !u!114 &370201186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -519,6 +520,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPot: {fileID: 1026064998132510, guid: 6ec3ca2e6b5a2be419a7af2f90902a66, type: 2}
+--- !u!114 &370201189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 370201180}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 665919e570f77534694f67c209c6de64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1 &493097377
 GameObject:
   m_ObjectHideFlags: 0
@@ -987,9 +1000,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 878108265}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5d1511c29e9db43979fbdd01c7660c, type: 3}
+  m_Script: {fileID: 11500000, guid: 32184f0d4b863104ea914fae4fe89e1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Slime: {fileID: 370201180}
 --- !u!1001 &880458950
 Prefab:
   m_ObjectHideFlags: 0
@@ -1009,11 +1023,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4551545909168642, guid: 3f25a1fd5a9ea65469635cc24b584414, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -22.51
       objectReference: {fileID: 0}
     - target: {fileID: 4551545909168642, guid: 3f25a1fd5a9ea65469635cc24b584414, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -1.35
+      value: -2.16
       objectReference: {fileID: 0}
     - target: {fileID: 4551545909168642, guid: 3f25a1fd5a9ea65469635cc24b584414, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2247,7 +2261,7 @@ Transform:
   m_GameObject: {fileID: 1740288329}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -17.59, y: -1.3055038, z: 0}
-  m_LocalScale: {x: 1, y: 10, z: 1}
+  m_LocalScale: {x: 1, y: 45.75012, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 17

@@ -6,9 +6,11 @@ public class Enemy_Behaviour : MonoBehaviour
     {
         Rigidbody2D rb;
         public GameObject HealthPot;
+        Animator anim;
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
+            anim = GetComponent<Animator>();
         }
         void Update()
         {
@@ -23,7 +25,14 @@ public class Enemy_Behaviour : MonoBehaviour
                 }
             }
         }
-        void ItemDrop(GameObject BonusItem)
+         void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.tag == "Player")
+            {
+                anim.Play("attack");
+            }
+        }
+    void ItemDrop(GameObject BonusItem)
         {
             Instantiate(BonusItem, transform.position = new Vector2(rb.position.x, -4.05f), rb.transform.rotation);
         }

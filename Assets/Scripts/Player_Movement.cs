@@ -8,8 +8,6 @@ public class Player_Movement : MonoBehaviour
     public float speed;
     private SpriteRenderer Player_Sprite;
     private Rigidbody2D rb;
-    public GameObject Spooned;
-    public Transform SpoonPoint;
     public float timechange;
     private float timeleft;
     private float timestopanim;
@@ -26,11 +24,6 @@ public class Player_Movement : MonoBehaviour
     void Update()
     {
         timeleft -= Time.deltaTime;
-        if (timeleft < 0)
-        {
-            Instantiate(original: Spooned, position: SpoonPoint.position, rotation: SpoonPoint.rotation);
-            timeleft = timechange;
-        }
         if (timestopanim < 0)
         {
             anim.SetFloat("Attack", 0.0f);
