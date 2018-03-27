@@ -2,11 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Detect : MonoBehaviour {
+public class Player_Detect : MonoBehaviour
+{
     float Enemy_Vision_x;
     float Enemy_Vision_y;
+    public GameObject Slime;
 
-     void Start()
+    void Start()
     {
         Enemy_Vision_x = transform.localScale.x;
         Enemy_Vision_y = transform.localScale.y;
@@ -26,3 +28,4 @@ public class Player_Detect : MonoBehaviour {
         }
     }
 }
+

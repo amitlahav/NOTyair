@@ -456,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370201180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -57.90838, y: -2.2985373, z: -0.1328125}
+  m_LocalPosition: {x: -4.79, y: -1.7, z: -0.1328125}
   m_LocalScale: {x: 7.8980184, y: 8.726874, z: 1}
   m_Children:
   - {fileID: 878108266}
@@ -933,12 +933,13 @@ GameObject:
   m_Component:
   - component: {fileID: 878108266}
   - component: {fileID: 878108267}
+  - component: {fileID: 878108268}
   m_Layer: 0
   m_Name: Enemy_Territory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 4294967295
+  m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &878108266
 Transform:
@@ -948,7 +949,7 @@ Transform:
   m_GameObject: {fileID: 878108265}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.0060002375, y: -0.038800005, z: -1.1035156}
-  m_LocalScale: {x: 1.5062433, y: 0.38843355, z: 1}
+  m_LocalScale: {x: 1.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 370201184}
   m_RootOrder: 0
@@ -978,6 +979,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &878108268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 878108265}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb5d1511c29e9db43979fbdd01c7660c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &880458950
 Prefab:
   m_ObjectHideFlags: 0
