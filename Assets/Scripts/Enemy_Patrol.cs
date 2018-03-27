@@ -12,12 +12,12 @@ public class Enemy_Patrol : MonoBehaviour {
     public float speed;
     float CurrentPosition;
     float NextMove;
-    Animator anim;
+    Animator anim;  
     private void Start()
     {
         EnemySprite = GetComponent<SpriteRenderer>();
         Enemy_body = GetComponent<Rigidbody2D>();
-        Random_Movement_Time = Random.Range(3, 7);
+        Random_Movement_Time = Random.Range(3, 5);
         Random_Movement_Length = Random.Range(5, 8);
         CurrentPosition = Enemy_body.position.x;
         NextMove = Random_Movement_Time;
