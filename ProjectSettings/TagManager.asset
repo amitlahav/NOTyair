@@ -11,6 +11,7 @@ TagManager:
   - LeftBolt
   - UI
   - Chest
+  - Coin
   layers:
   - Default
   - TransparentFX
