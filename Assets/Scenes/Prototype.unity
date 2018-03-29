@@ -457,7 +457,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 370201180}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -45.29, y: -3.25, z: -0.1328125}
+  m_LocalPosition: {x: -48.47, y: -3.28, z: -0.1328125}
   m_LocalScale: {x: 7.8980184, y: 8.726874, z: 1}
   m_Children:
   - {fileID: 878108266}
@@ -483,7 +483,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 6
+  m_Constraints: 4
 --- !u!114 &370201186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff15220451fea994c9fa8b9d2fc8148b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.3
+  speed: 1
 --- !u!114 &370201187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -508,6 +508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Health: 50
+  DeathAnimation: {fileID: 7400000, guid: 60c9f2a3312ba834c9afc04619a71421, type: 2}
+  Enemy_Score_Worth: 50
 --- !u!114 &370201188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -531,7 +533,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665919e570f77534694f67c209c6de64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.5
 --- !u!1 &493097377
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,6 +1222,11 @@ Prefab:
     - target: {fileID: 4092266103004832, guid: 3f25a1fd5a9ea65469635cc24b584414, type: 2}
       propertyPath: m_LocalPosition.y
       value: 0.047
+      objectReference: {fileID: 0}
+    - target: {fileID: 50529242124933578, guid: 3f25a1fd5a9ea65469635cc24b584414,
+        type: 2}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3f25a1fd5a9ea65469635cc24b584414, type: 2}

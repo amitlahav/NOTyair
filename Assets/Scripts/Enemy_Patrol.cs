@@ -25,25 +25,36 @@ public class Enemy_Patrol : MonoBehaviour {
     }
     void Update()
     {
+        if (GetComponent<Health_System_Enemies>().Health >= 0)
+        {
             if (TurningLeft)
             {
-                if (Enemy_body.position.x >= CurrentPosition+Random_Movement_Length)
+                if (Enemy_body.position.x >= CurrentPosition + Random_Movement_Length)
                 {
-                    Idle();          
-                }
-                 else
-                 {
-                    EnemyMovementRight();
-                 }
-            }
-            else if(!TurningLeft)
-            {
-                EnemyMovementLeft();
-                if (Enemy_body.position.x <= CurrentPosition - Random_Movement_Length)
-                {
+                    anim.SetInteger("ChangeState", 0);
                     Idle();
                 }
+                else
+                {
+                    EnemyMovementRight();
+                    anim.SetInteger("ChangeState", 1);
+                }
             }
+            else if (!TurningLeft)
+            {
+
+                if (Enemy_body.position.x <= CurrentPosition - Random_Movement_Length)
+                {
+                    anim.SetInteger("ChangeState", 0);
+                    Idle();
+                }
+                else
+                {
+                    EnemyMovementLeft();
+                    anim.SetInteger("ChangeState", 1);
+                }
+            }
+        }
     }
     void EnemyMovementRight()
     {
@@ -57,15 +68,14 @@ public class Enemy_Patrol : MonoBehaviour {
     }
     void Idle()
     {
-        anim.Play("idle");
+        
         if(NextMove-Time.time >= 0f)
         {
             Enemy_body.velocity = new Vector2(0, 0);
-            
         }
         else
         {
-            anim.Play("move");
+            
             TurningLeft = !TurningLeft;
             NextMove = Time.time + Random_Movement_Time;
             CurrentPosition = Enemy_body.position.x;

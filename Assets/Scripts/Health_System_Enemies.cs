@@ -3,42 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Health_System_Enemies : MonoBehaviour {
+    public int MaxHealth;
     public int Health;
     Animator anim;
+    Rigidbody2D rb;
+    public AnimationClip DeathAnimation;
+    public int Enemy_Score_Worth;
     void Start()
     {
-        anim = GetComponent<Animator>();  
+        anim = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
+        Health = MaxHealth;
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        StartCoroutine(BoltCollision(collision));
+        if (collision.gameObject.tag == "Bolt")
+        {
+            Health -= collision.gameObject.GetComponent<Mover>().Damage;
+            anim.SetTrigger("Hurt");
+        }
+        if (collision.gameObject.tag == "LeftBolt")
+        {
+            Health -= collision.gameObject.GetComponent<LeftMover>().Damage;
+            anim.SetTrigger("Hurt");
+        }
+        if (Health <= 0)
+        {
+            rb.velocity = new Vector2(0, 0);
+            rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            Death();
+        }
     }
     void HealthToRemove(int HealthToRemove)
     {
         Health -= HealthToRemove;
     }
-    IEnumerator BoltCollision(Collision2D collision)
+    void Death()
     {
-        if (collision.gameObject.tag == "Bolt")
-        {
-            Health -= collision.gameObject.GetComponent<Mover>().Damage;
-            anim.Play("hurt");
-            yield return new WaitForSeconds(0.4f);
-        }
-        if (collision.gameObject.tag == "LeftBolt")
-        {
-            Health -= collision.gameObject.GetComponent<LeftMover>().Damage;
-            anim.Play("hurt");
-            yield return new WaitForSeconds(0.4f);
-        }
-        if (Health <= 0)
-        {
-            yield return null;
-            anim.Play("die");
-            yield return new WaitForSecondsRealtime(0.4f);
-            Health = 0;
-            Destroy(this.gameObject);
-            UIManager.Score += 50;
-        }
+        anim.SetTrigger("Die");
+
+        Destroy(rb.gameObject, DeathAnimation.length);
+        UIManager.Score += Enemy_Score_Worth;
     }
 }

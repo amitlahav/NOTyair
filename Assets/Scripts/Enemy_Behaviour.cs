@@ -14,27 +14,34 @@ public class Enemy_Behaviour : MonoBehaviour
         }
         void Update()
         {
-            int DropChance;
-            Debug.Log(GetComponent<Health_System_Enemies>().Health);
-            if (GetComponent<Health_System_Enemies>().Health == 0)
-            {
-                DropChance = Random.Range(1, 100);
-                if (DropChance > 90)
-                {
-                ItemDrop(HealthPot);
-                }
-            }
+        StartCoroutine(ItemDrop());   
         }
-         void OnCollisionEnter2D(Collision2D collision)
+         void OnCollisionStay2D(Collision2D collision)
         {
             if (collision.gameObject.tag == "Player")
             {
-                anim.Play("attack");
+            anim.SetTrigger("Attack");
             }
         }
     void ItemDrop(GameObject BonusItem)
+    {
+        BonusItem.transform.position = new Vector2(transform.position.x, -4.05f);
+        Instantiate(BonusItem, BonusItem.transform.position, rb.transform.rotation);
+    }
+    IEnumerator ItemDrop()
+    {
+        Debug.Log(GetComponent<Health_System_Enemies>().Health);
+        if (GetComponent<Health_System_Enemies>().Health <= 0)
         {
-            Instantiate(BonusItem, transform.position = new Vector2(rb.position.x, -4.05f), rb.transform.rotation);
+            int DropChance;
+            DropChance = Random.Range(1, 100);
+            if (DropChance > 99)
+            {
+                ItemDrop(HealthPot);
+                yield return null;
+            }
         }
     }
+}
+
 
