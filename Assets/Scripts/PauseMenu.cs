@@ -8,10 +8,10 @@ public class PauseMenu : MonoBehaviour {
     public static bool IsPaused = false;
     public GameObject PauseMenuPanel;
     public GameObject PlayerUI;
-
+    public bool IsDead = false;
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)&&!IsDead)
         {
             Debug.Log("pause");
             if (IsPaused)
@@ -38,6 +38,7 @@ public class PauseMenu : MonoBehaviour {
         IsPaused = true;
         PlayerUI.SetActive(false);
         PauseMenuPanel.SetActive(true);
+        
         Time.timeScale = 0f;
     }
     public void GameMenu()
