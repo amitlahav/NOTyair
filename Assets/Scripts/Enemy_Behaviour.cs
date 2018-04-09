@@ -30,7 +30,6 @@ public class Enemy_Behaviour : MonoBehaviour
     }
     IEnumerator ItemDrop()
     {
-        Debug.Log(GetComponent<Health_System_Enemies>().Health);
         if (GetComponent<Health_System_Enemies>().Health <= 0)
         {
             int DropChance;

@@ -5,55 +5,58 @@ using UnityEngine;
 public class Player_Movement : MonoBehaviour
 {
     const int RIGHT = 0, LEFT = 1;
+    Transform Fist_Left;
+    Transform Fist_Right;
     public float speed;
     private SpriteRenderer Player_Sprite;
     private Rigidbody2D rb;
     public float timechange;
-    private float timeleft;
     private float timestopanim;
-    private float animduration = 0.6f;
     private float moveVelocity;
     private Animator anim;
+    public Health_System_Player PlayerHealth;
     public static int LastKey = 0;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         Player_Sprite = GetComponent<SpriteRenderer>();
+        //Fist_Right = transform.Find("Fist_Right");
+        //Fist_Left = transform.Find("Fist_Left");
     }
     void Update()
     {
-        timeleft -= Time.deltaTime;
-        if (timestopanim < 0)
+        if (PlayerHealth.CurrentHealth == 0)
         {
-            anim.SetFloat("Attack", 0.0f);
-            timestopanim = animduration;
+            rb.constraints = RigidbodyConstraints2D.FreezeAll;
+            anim.SetTrigger("Death");
         }
     }
 
     void FixedUpdate()
     {
         moveVelocity = 0f;
-
         if (Input.GetKey("d"))
         {
-            //rb.velocity = new Vector2(5 * speed, rb.velocity.y);
             moveVelocity = speed * 5;
             LastKey = 0;
+          //  Fist_Right.gameObject.SetActive(true);
+          //  Fist_Left.gameObject.SetActive(false);
             Player_Sprite.flipX = false;
         }
         if (Input.GetKey("a"))
         {
-            //rb.velocity = new Vector2(-5 * speed, rb.velocity.y);
             moveVelocity = speed * -5;
             LastKey = 1;
+           // Fist_Right.gameObject.SetActive(false);
+           // Fist_Left.gameObject.SetActive(true);
             Player_Sprite.flipX = true;
         }
         rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
+        anim.SetFloat("Move", Input.GetAxisRaw("Horizontal"));
         if (Input.GetKeyDown("w") && rb.velocity.y == 0)
-        {
+        {   
             rb.velocity = new Vector2(rb.velocity.x, 3 * speed);
         }
-        anim.SetFloat("Move", Input.GetAxisRaw("Horizontal"));
     }
 }

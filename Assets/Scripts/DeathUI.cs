@@ -13,13 +13,11 @@ public class DeathUI : MonoBehaviour {
     }
     void Update()
     {
-        Debug.Log(Health.CurrentHealth);
         if (Health.CurrentHealth <= 0)
         {
             DeathPanel.SetActive(true);
             Player_UI.SetActive(false);
             Death.IsDead = true;
-            Time.timeScale = 0f;
         }
     }
     public void QuitGame()

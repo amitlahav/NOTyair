@@ -7,7 +7,6 @@ public class WeaponsBehaviour : MonoBehaviour
     const int RIGHT = 0, LEFT = 1;
     private float nextfire = 0;
     private float Reload_Time_Left;
-    private float timeleft;
     public float ReloadTime;
     public float FireRate;
     public GameObject LeftShot;
@@ -29,7 +28,6 @@ public class WeaponsBehaviour : MonoBehaviour
     }
     void Update()
     {
-        timeleft -= Time.deltaTime;
         if (Magazine>0) {
             if (Input.GetKeyDown("l") && Time.time > nextfire)
             {
@@ -69,7 +67,6 @@ public class WeaponsBehaviour : MonoBehaviour
         {
             WeaponSprite.flipX = false;
         }
-
     }
     void ReloadWeapon()
     {

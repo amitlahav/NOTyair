@@ -24,7 +24,7 @@ public class WeaponSwitch : MonoBehaviour {
         Magazine = MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().Magazine;
         //
 
-        if (!MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().WeaponOwned)// selected first weapon as held weapon if not weapon is currently selected
+        if (!MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().WeaponOwned)// selected first weapon as held weapon if no weapon is currently selected
         {
             SelectedWeapon = 0;
         }
@@ -33,7 +33,7 @@ public class WeaponSwitch : MonoBehaviour {
             if (Input.GetKeyDown("p"))// Looking for the next weapon in the list MainWeapon - if found equliazing SelectedWeapon to the location of that next owned weapon 
             {
                 int NextWeapon = SelectedWeapon+1;
-                for (int i = NextWeapon; i<MainWeapon.Count;i ++)
+                for (int i = NextWeapon; i < MainWeapon.Count; i++)
                 {
                     if (MainWeapon[i].GetComponent<WeaponsBehaviour>().WeaponOwned)
                     {
