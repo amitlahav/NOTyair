@@ -12,7 +12,7 @@ public class MoveScene : MonoBehaviour {
             load = true;
             if (other.gameObject.tag == "Player")
             {
-                StartCoroutine(ChangeScene(other.gameObject, Consts.Game1));
+                StartCoroutine(ChangeScene(other.gameObject, Consts.Current_Scene+1));
                 Consts.Current_Scene++;
                 Debug.Log(Consts.Current_Scene);
             }

@@ -12,6 +12,8 @@ TagManager:
   - UI
   - Chest
   - Coin
+  - Ladder
+  - Wall
   layers:
   - Default
   - TransparentFX

@@ -59,4 +59,19 @@ public class Player_Movement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 3 * speed);
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == "Ladder")
+        {
+            if (Input.GetKey("w"))
+            {
+                rb.velocity = new Vector2(0,2f*speed);  
+                
+            }
+            if (Input.GetKey("s"))
+            {
+                rb.velocity = new Vector2(0, -3f * speed);
+            }
+        }
+    }
 }
