@@ -7,6 +7,7 @@ public class Enemy_Behaviour : MonoBehaviour
         Rigidbody2D rb;
         public GameObject HealthPot;
         Animator anim;
+        bool TryDropped = false;
         void Start()
         {
             rb = GetComponent<Rigidbody2D>();
@@ -32,9 +33,10 @@ public class Enemy_Behaviour : MonoBehaviour
     {
         if (GetComponent<Health_System_Enemies>().Health <= 0)
         {
+            TryDropped = true;
             int DropChance;
             DropChance = Random.Range(1, 100);
-            if (DropChance > 99)
+            if (DropChance > 95)
             {
                 ItemDrop(HealthPot);
                 yield return null;

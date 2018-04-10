@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Player_Detection : MonoBehaviour
 {
-    float Enemy_Vision_x;
-    float Enemy_Vision_y;
+    public float Enemy_Vision_x;
+    public float Enemy_Vision_y;
     public GameObject Slime;
 
     void Start()

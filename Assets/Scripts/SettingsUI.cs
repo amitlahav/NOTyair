@@ -13,7 +13,6 @@ public class SettingsUI : MonoBehaviour
         Brightness.maxValue = 0.5f;
         Brightness.minValue = -0.5f;
         Brightness.value = PlayerPrefs.GetFloat("Brightness_Value");
-        Debug.Log(PlayerPrefs.GetFloat("Brightness_Value"));
     }
     void Update()
     {

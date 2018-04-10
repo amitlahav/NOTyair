@@ -9,6 +9,7 @@ public class Health_System_Enemies : MonoBehaviour {
     Rigidbody2D rb;
     public AnimationClip DeathAnimation;
     public int Enemy_Score_Worth;
+    bool Dead = false;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -27,11 +28,15 @@ public class Health_System_Enemies : MonoBehaviour {
             Health -= collision.gameObject.GetComponent<LeftMover>().Damage;
             anim.SetTrigger("Hurt");
         }
-        if (Health <= 0)
+    }
+    private void Update()
+    {
+        if (Health <= 0&&Dead == false)
         {
             rb.velocity = new Vector2(0, 0);
             rb.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
             Death();
+            Dead = true;
         }
     }
     void HealthToRemove(int HealthToRemove)
@@ -41,7 +46,7 @@ public class Health_System_Enemies : MonoBehaviour {
     void Death()
     {
         anim.SetTrigger("Die");
-
+        Debug.Log(2);
         Destroy(rb.gameObject, DeathAnimation.length);
         UIManager.Score += Enemy_Score_Worth;
     }

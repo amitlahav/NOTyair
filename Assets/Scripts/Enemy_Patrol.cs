@@ -7,19 +7,20 @@ public class Enemy_Patrol : MonoBehaviour {
     float Random_Movement_Time;
     float Random_Movement_Length;
     private SpriteRenderer EnemySprite;
-    bool TurningLeft = true;
+    int TurningLeft;
     Rigidbody2D Enemy_body;
     public float speed;
     float CurrentPosition;
     float NextMove;
     Animator anim;
-    RaycastHit2D Wall;
+    public Player_Detection Detection;
     private void Start()
     {
         EnemySprite = GetComponent<SpriteRenderer>();
         Enemy_body = GetComponent<Rigidbody2D>();
         Random_Movement_Time = Random.Range(4, 5);
         Random_Movement_Length = Random.Range(5,8);
+        TurningLeft = Random.Range(0, 2); // 0 for false,1 for true
         CurrentPosition = Enemy_body.position.x;
         NextMove = Random_Movement_Time;
         anim = GetComponent<Animator>();
@@ -28,7 +29,7 @@ public class Enemy_Patrol : MonoBehaviour {
     {
         if (GetComponent<Health_System_Enemies>().Health >= 0)
         {
-            if (TurningLeft)// is the next turn left?
+            if (TurningLeft == 1)// is the next turn left?
             {
                 if (Enemy_body.position.x >= CurrentPosition + Random_Movement_Length)// checking the objects location; if its bigger than the inital position
                 {
@@ -41,7 +42,7 @@ public class Enemy_Patrol : MonoBehaviour {
                     anim.SetInteger("ChangeState", 1);
                 }
             }
-            else if (!TurningLeft)
+            else if (TurningLeft == 0)
             {
 
                 if (Enemy_body.position.x <= CurrentPosition - Random_Movement_Length)//same as above for the oposite side
@@ -59,9 +60,15 @@ public class Enemy_Patrol : MonoBehaviour {
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Wall") // if hitting a wall
+        if (collision.gameObject.tag == "Wall" || collision.gameObject.tag == "Enemy") // if hitting a wall or enemy
         {
-            TurningLeft = !TurningLeft; // turn the object to not bug
+            SwitchTurns(); // turn the object to not bug
+        }
+        else if (collision.gameObject.tag == "Bolt"|| collision.gameObject.tag == "LeftBolt") // if enemy hit chase the player
+        {
+            transform.localScale += new Vector3(Detection.Enemy_Vision_x * 1.5f, Detection.Enemy_Vision_y * 1.5f, 0f);
+            transform.GetComponent<Enemy_Patrol>().enabled = false;
+            transform.GetComponent<Enemy_Chase>().enabled = true;
         }
     }
     void EnemyMovementRight()
@@ -84,9 +91,20 @@ public class Enemy_Patrol : MonoBehaviour {
         else
         {
             
-            TurningLeft = !TurningLeft;// time done... starting to move to the other side
+            SwitchTurns();// time done... starting to move to the other side
             NextMove = Time.time + Random_Movement_Time; // starting to count when the next move will be when starting to move with the random movement time randgon integer
             CurrentPosition = Enemy_body.position.x;// saving current position to be as an anchor 
+        }
+    }
+    void SwitchTurns()
+    {
+        if (TurningLeft == 1)
+        {
+            TurningLeft = 0;
+        }
+        else
+        {
+            TurningLeft = 1;
         }
     }
 }

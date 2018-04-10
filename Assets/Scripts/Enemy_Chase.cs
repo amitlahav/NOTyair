@@ -38,12 +38,10 @@ public class Enemy_Chase : MonoBehaviour
     {
         if (collision.gameObject.tag == "Wall"&& Player.transform.position.x >= transform.position.x)
         {
-            Debug.Log("right");
             rb.velocity = new Vector2(rb.velocity.x, 3.2f * speed);
         }
         else if (collision.gameObject.tag == "Wall" && Player.transform.position.x <= transform.position.x)
         {
-            Debug.Log("left");
             rb.velocity = new Vector2(rb.velocity.x, 3.2f * speed);
         }
     }
