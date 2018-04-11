@@ -18,12 +18,14 @@ public class Enemy_Patrol : MonoBehaviour {
     {
         EnemySprite = GetComponent<SpriteRenderer>();
         Enemy_body = GetComponent<Rigidbody2D>();
-        Random_Movement_Time = Random.Range(4, 5);
+        Random_Movement_Time = Random.Range(1, 8);
         Random_Movement_Length = Random.Range(5,8);
         TurningLeft = Random.Range(0, 2); // 0 for false,1 for true
         CurrentPosition = Enemy_body.position.x;
         NextMove = Random_Movement_Time;
         anim = GetComponent<Animator>();
+        Debug.Log(Random_Movement_Length);
+        Debug.Log(Random_Movement_Time);
     }
     void Update()
     {

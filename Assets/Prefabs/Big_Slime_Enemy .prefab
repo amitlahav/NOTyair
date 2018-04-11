@@ -155,9 +155,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1746957757366384}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -52.85, y: -2.33, z: -0.1328125}
-  m_LocalScale: {x: 15.177687, y: 16.582052, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -66.26308, y: -0.47997203, z: -0.1328125}
+  m_LocalScale: {x: 31.137478, y: 29.444487, z: 1}
   m_Children:
   - {fileID: 4512444624062944}
   - {fileID: 224594127136947408}
@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.1
-  Player: {fileID: 0}
+  Slime: {fileID: 1746957757366384}
 --- !u!114 &114330328573607928
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -337,7 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MaxHealth: 250
-  Health: 0
+  Health: 250
   DeathAnimation: {fileID: 7400000, guid: 60c9f2a3312ba834c9afc04619a71421, type: 2}
   Enemy_Score_Worth: 350
 --- !u!114 &114411798141229896
@@ -396,9 +396,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 3
+  m_MaxValue: 250
   m_WholeNumbers: 1
-  m_Value: 3
+  m_Value: 250
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -492,8 +492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32184f0d4b863104ea914fae4fe89e1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Enemy_Vision_x: 0
-  Enemy_Vision_y: 0
+  Enemy_Vision_x: 1.5
+  Enemy_Vision_y: 0.5
   Slime: {fileID: 1746957757366384}
 --- !u!212 &212518708994933016
 SpriteRenderer:
@@ -529,9 +529,9 @@ SpriteRenderer:
   m_SortingLayerID: 493469653
   m_SortingLayer: 2
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 7f44e22241196b5439d4977744db191e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: dcc1087359790b746934fa847cdab074, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
+  m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.32, y: 0.25}

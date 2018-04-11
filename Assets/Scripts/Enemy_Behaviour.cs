@@ -36,7 +36,7 @@ public class Enemy_Behaviour : MonoBehaviour
             TryDropped = true;
             int DropChance;
             DropChance = Random.Range(1, 100);
-            if (DropChance > 95)
+            if (DropChance > 99)
             {
                 ItemDrop(HealthPot);
                 yield return null;
