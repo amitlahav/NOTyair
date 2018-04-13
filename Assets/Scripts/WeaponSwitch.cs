@@ -7,6 +7,17 @@ public class WeaponSwitch : MonoBehaviour {
     public int Ammo;
     public int Magazine;
     public List<Transform> MainWeapon = new List<Transform>();// list of all transforms in weaponheld
+    /*<Summary>
+     * Code used to switch between the owned weapons
+     * of the player of which he picked during his playthrogh
+     * </Summary>
+     * <Logic>
+     * Creating a list of all Weapons in the transform
+     * Declaring first weapon as the starting weapon
+     * Each Weapon picked by player changes its status to owned
+     * By predetermined Keycodes player can switch between said owned weapons
+     * </Logic>*/
+
     void Start()
     {
         
@@ -17,8 +28,11 @@ public class WeaponSwitch : MonoBehaviour {
         MainWeapon[0].GetComponent<WeaponsBehaviour>().WeaponOwned = true;// determaning first weapon as main weapon and declaring him as owned
         SelectWeapon();// selecting first weapon
     }
+
+
     void Update()
     {
+
         //For The UI - Taking the Ammo and Magazine from the current selectedWeapon and displays it
         Ammo = MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().Ammo;
         Magazine = MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().Magazine;
@@ -28,6 +42,8 @@ public class WeaponSwitch : MonoBehaviour {
         {
             SelectedWeapon = 0;
         }
+
+
         if (SelectedWeapon <= MainWeapon.Count - 1)//keeping the list boundry
         {
             if (Input.GetKeyDown("p"))// Looking for the next weapon in the list MainWeapon - if found equliazing SelectedWeapon to the location of that next owned weapon 
@@ -42,6 +58,8 @@ public class WeaponSwitch : MonoBehaviour {
                 }
             }
         }
+
+
             if (Input.GetKeyDown("o") && SelectedWeapon > 0)// same but for previous
             {
             int PreviousWeapon = SelectedWeapon - 1;
@@ -57,6 +75,8 @@ public class WeaponSwitch : MonoBehaviour {
 
         SelectWeapon();// select weapon
     }
+
+
     public void SelectWeapon()// going over all weapons in the the transform and selecting the weapon equals to the int "SelectedWeapon"
     {
         int i = 0;

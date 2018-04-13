@@ -10,15 +10,20 @@ public class UIManager : MonoBehaviour {
     public WeaponSwitch HeldWeapon;
     public Image WeaponSprite;
     public WeaponSwitch WeaponImage;
+    public Text Potion_Inv;
+    public static int Potions;
     public static int Score;
     public void Start()
     {
+        Potions = 1;    
     }
+
     public void Update () {
         HealthBar.maxValue = playerHealth.MaxHealth;
         HealthBar.value = playerHealth.CurrentHealth;
         AmmoValue.text = "Ammo: "+HeldWeapon.Magazine+"/"+HeldWeapon.Ammo;
         GameScore.text = "Score: " + Score;
         WeaponSprite.sprite = WeaponImage.MainWeapon[WeaponImage.SelectedWeapon].gameObject.GetComponent<SpriteRenderer>().sprite;
+        Potion_Inv.text = "X" + Potions; 
     }
 }

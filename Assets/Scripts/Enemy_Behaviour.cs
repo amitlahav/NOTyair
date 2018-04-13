@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class Enemy_Behaviour : MonoBehaviour
     {
+    /*<Summary>
+     * Controlling several function of the "Enemy"
+     * #Drop system - dropping potions
+     * #Animation - Attack animation
+     * </Summary>
+     * <Logic>
+     * #When player is at collision with "Enemy" set the animator trigger "Attack"
+     * #Setting a random integer to be the drop chance of the item
+     * #Dropped when the Enemy's health is 0
+     * #Setting a bolean of - if tried to drop and failed or succeded - 
+     * to avoid the fact that the Enemy dies in few frames and not just once
+     * and by doing so making the drop system work only once as supposed to do
+     * </Logic>*/
         Rigidbody2D rb;
         public GameObject HealthPot;
         Animator anim;
@@ -15,7 +28,7 @@ public class Enemy_Behaviour : MonoBehaviour
         }
         void Update()
         {
-        StartCoroutine(ItemDrop());   
+        ItemDrop();   
         }
          void OnCollisionStay2D(Collision2D collision)
         {
@@ -24,23 +37,18 @@ public class Enemy_Behaviour : MonoBehaviour
             anim.SetTrigger("Attack");
             }
         }
-    void ItemDrop(GameObject BonusItem)
-    {
-        BonusItem.transform.position = new Vector2(transform.position.x, -4.05f);
-        Instantiate(BonusItem, BonusItem.transform.position, rb.transform.rotation);
-    }
-    IEnumerator ItemDrop()
+
+    void ItemDrop()
     {
         if (GetComponent<Health_System_Enemies>().Health <= 0)
         {
-            TryDropped = true;
             int DropChance;
             DropChance = Random.Range(1, 100);
-            if (DropChance > 99)
+            if (DropChance > 80&&TryDropped == false)
             {
-                ItemDrop(HealthPot);
-                yield return null;
+                UIManager.Potions++;
             }
+            TryDropped = true;
         }
     }
 }

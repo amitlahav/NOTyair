@@ -4,6 +4,21 @@ using UnityEngine;
 using UnityEngine.UI;
 public class SettingsUI : MonoBehaviour
 {
+    /*<Summary>
+     * #This is the Settings UI, His panel works all the time
+     * #this UI works when the player presses the menu button after pause
+     * #In this UI the player can set the Brightness of the game
+     * and the Volume of the Audio
+     * </Summary>
+     * <Logic>
+     * #There are 2 Sliders - 1 for the changing of the Volume
+     * and one for the changing of the Brightness
+     * if the Brightness Slider is Above the half the panel of the UI turns White
+     * and Decreasing the Alpha-Opaque-
+     * #if the Brightness Slider is Below the half the panel turns black
+     * and Deacrasing the Alpha-Opaque-
+     * #The Slider's Value is saved on "PlayerPrefs".
+     * </Logic>*/
     public Slider Brightness;
     //public Slider Volume;
     //public Audio BgMusic;
