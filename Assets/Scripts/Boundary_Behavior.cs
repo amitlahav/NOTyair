@@ -4,14 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Boundary_Behavior : MonoBehaviour {
-
-     void OnTriggerExit2D(Collider2D Bolt)
+    /*/<Summary>
+     * Controlling game boundry
+     * </Summary>
+     * <Logic>
+     * upon exiting the OnTrigger BoxCollider2D
+     * Destroy GameObject
+     * Unless gameobject is @Player
+     * # Sending to Game1
+     * </Logic>/*/
+     void OnTriggerExit2D(Collider2D collision) 
     {
-
-        if (gameObject.tag == "Player")
+        if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene("Prototype");
+            SceneManager.LoadScene(1);
         }
-        Destroy(Bolt.gameObject);
+        Destroy(collision.gameObject);
     }
 }

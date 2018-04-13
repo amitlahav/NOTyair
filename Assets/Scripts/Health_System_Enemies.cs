@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Health_System_Enemies : MonoBehaviour {
+    /*/<Summary>
+     * if hit by a player's bolt - remove health from the enemy
+     * when health lowers down than 0 - Death and Player recieves score
+     * </Summary>
+     * <Logic>
+     * when hit by a bolt remove from the enemy the damage that bolt does - that damage comes from the WeaponBehaviour
+     * upon Death Freezing the body of the Enemy -> Destroying the Enemy -> Adding Score to the Player 
+     * </Logic>/*/
     public int MaxHealth;
     public int Health;
     Animator anim;

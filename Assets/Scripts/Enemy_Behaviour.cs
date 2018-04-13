@@ -17,13 +17,11 @@ public class Enemy_Behaviour : MonoBehaviour
      * to avoid the fact that the Enemy dies in few frames and not just once
      * and by doing so making the drop system work only once as supposed to do
      * </Logic>*/
-    Rigidbody2D rb;
     public GameObject HealthPot;
     Animator anim;
     bool TryDroppedPotion = false;
     void Start()
         {
-            rb = GetComponent<Rigidbody2D>();
             anim = GetComponent<Animator>();
         }
         void Update()

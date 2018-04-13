@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Consts : MonoBehaviour
 {
+    //Script containing important consts used through all scripts//
     public static int PROTOTYPE = 1;
     public static int NUMBER_WEAPONS = 2;
     public static int Ak_Weapon_Index = 1;

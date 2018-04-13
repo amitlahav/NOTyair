@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class Player_Movement : MonoBehaviour
 {
+    /*/<Summary>
+     * Controling the Player's Movement with WASD
+     * Going up and down a ladder
+     * Death animation of the player
+     * </Summary>
+     * <Logic>
+     * changing velocity of player depend on key pressed 
+     * when health goes down to 0 set the death trigger on the animator
+     * When Triggering a ladder's BoxCollider2D w and s change and now go up and down the ladder
+     * </Logic>/*/
+
     const int RIGHT = 0, LEFT = 1;
     Transform Fist_Left;
     Transform Fist_Right;
@@ -16,14 +27,14 @@ public class Player_Movement : MonoBehaviour
     private Animator anim;
     public Health_System_Player PlayerHealth;
     public static int LastKey = 0;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         Player_Sprite = GetComponent<SpriteRenderer>();
-        //Fist_Right = transform.Find("Fist_Right");
-        //Fist_Left = transform.Find("Fist_Left");
     }
+
     void Update()
     {
         if (PlayerHealth.CurrentHealth == 0)
@@ -40,16 +51,12 @@ public class Player_Movement : MonoBehaviour
         {
             moveVelocity = speed * 5;
             LastKey = 0;
-          //  Fist_Right.gameObject.SetActive(true);
-          //  Fist_Left.gameObject.SetActive(false);
             Player_Sprite.flipX = false;
         }
         if (Input.GetKey("a"))
         {
             moveVelocity = speed * -5;
             LastKey = 1;
-           // Fist_Right.gameObject.SetActive(false);
-           // Fist_Left.gameObject.SetActive(true);
             Player_Sprite.flipX = true;
         }
         rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
@@ -59,6 +66,7 @@ public class Player_Movement : MonoBehaviour
             rb.velocity = new Vector2(rb.velocity.x, 3 * speed);
         }
     }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.tag == "Ladder")

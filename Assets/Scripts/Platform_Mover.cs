@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class Platform_Mover : MonoBehaviour {
 
-    Rigidbody2D rb;
+    // Moving a platform - left - at -10 velocity
 
+    Rigidbody2D rb;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();

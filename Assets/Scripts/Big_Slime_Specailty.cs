@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Big_Slime_Specailty : MonoBehaviour {
+    /*/<Summary>
+     * Feature the Big Slimes have
+     * Upon death spliting into 2
+     * </Summary>
+     * <Logic>
+     * When the Slime dies, spawn 2 smaller slimes in a 
+     * predetermined positions that based upon his
+     * </Logic>/*/
 
     public Health_System_Enemies Big_Slime;
     public GameObject Small_Slime;

@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponSwitch : MonoBehaviour {
+    /*<Summary>
+ * Code used to switch between the owned weapons
+ * of the player of which he picked during his playthrough
+ * </Summary>
+ * <Logic>
+ * Creating a list of all Weapons in the transform
+ * Declaring first weapon as the starting weapon
+ * Each Weapon picked by player changes its status to owned
+ * By predetermined Keycodes player can switch between said owned weapons
+ * </Logic>*/
+
     public int SelectedWeapon = 0;
     public int Ammo;
     public int Magazine;
     public List<Transform> MainWeapon = new List<Transform>();// list of all transforms in weaponheld
-    /*<Summary>
-     * Code used to switch between the owned weapons
-     * of the player of which he picked during his playthrough
-     * </Summary>
-     * <Logic>
-     * Creating a list of all Weapons in the transform
-     * Declaring first weapon as the starting weapon
-     * Each Weapon picked by player changes its status to owned
-     * By predetermined Keycodes player can switch between said owned weapons
-     * </Logic>*/
+
 
     void Start()
     { 

@@ -3,6 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class LeftMover : MonoBehaviour {
+    /*/<Summary>
+     * Sending the Bolt Left
+     * Destroying when hitting stuff
+     * </Summary
+     * <Logic>
+     * gives an object velocity to set him going left
+     * when touching a collider destroy this gameObject
+     * </Logic>/*/
 
     private Rigidbody2D rb;
     public float speed;
@@ -12,11 +20,7 @@ public class LeftMover : MonoBehaviour {
         rb = GetComponent<Rigidbody2D>();
         rb.velocity = -transform.right * speed;
     }
-    /*void OnCollisionEnter2D(Collision2D Collision)
-    {
-        Destroy(Collision.otherCollider.gameObject);
-        Destroy(Collision.gameObject);
-    }*/
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(rb.gameObject);

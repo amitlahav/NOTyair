@@ -4,6 +4,8 @@ using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class MoveScene : MonoBehaviour {
+    // summ later
+
     bool load = false;
     public Vector2 SpawnPoint;
     void OnTriggerEnter2D(Collider2D other)

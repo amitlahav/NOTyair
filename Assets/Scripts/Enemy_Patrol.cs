@@ -3,6 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Patrol : MonoBehaviour {
+    /*/<Summary>
+     * Enemy's Patroling Script - Makes the Enemy to walk Right and Left - Covering Grounds
+     * each enemy gets a random distance to walk and a random time to do the distance in
+     * when a player walks in the enemy's Vision Sight - Stop patroling and [start chasing the player](different script)
+     * </Summary>
+     * <Logic>
+     * Checking if the Enemy has already walked left - walks to opposite direction accordingly
+     * when starting to move - starting the timer for the next move
+     * upon reaching patrol destination staying still for as long as the timer says
+     * repeating action until player entering Trigger BoxCollider2D or hitting a wall or another Slime
+     * if he by a Bolt - Switching to the Chase Script
+     * </Logic>/*/
 
     float Random_Movement_Time;
     float Random_Movement_Length;

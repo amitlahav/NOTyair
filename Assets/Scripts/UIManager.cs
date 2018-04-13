@@ -3,6 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 public class UIManager : MonoBehaviour {
+
+    /*/<Summary>
+     * Controlling the UI of the Player 
+     * Healh bar - Ammo and magazine - weapon held - potions - score
+     * Storing the amount of potions held
+     * </Summary>
+     * <Logic>
+     * taking values from other scripts and presenting them on screen with texts Sliders and images
+     * Score and potions value is stored here and only here
+     * </Logic>*/
+
     public Slider HealthBar;
     public Health_System_Player playerHealth;
     public Text AmmoValue;
@@ -13,6 +24,7 @@ public class UIManager : MonoBehaviour {
     public Text Potion_Inv;
     public static int Potions;
     public static int Score;
+
     public void Start()
     {
         Potions = 1;    

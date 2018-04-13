@@ -19,10 +19,12 @@ public class SettingsUI : MonoBehaviour
      * and Deacrasing the Alpha-Opaque-
      * #The Slider's Value is saved on "PlayerPrefs".
      * </Logic>*/
+
     public Slider Brightness;
     public Slider Volume;
     public AudioSource BgMusic;
     public GameObject Player_Panel;
+
     void Start()
     {
         Volume.maxValue = 1f;
@@ -33,6 +35,7 @@ public class SettingsUI : MonoBehaviour
         Brightness.value = PlayerPrefs.GetFloat("Brightness_Value");
         Volume.value = PlayerPrefs.GetFloat("Volume_Value");
     }
+
     void Update()
     {
         if (Brightness.value >= 0)
@@ -48,9 +51,9 @@ public class SettingsUI : MonoBehaviour
         BgMusic.GetComponent<AudioSource>().volume = Volume.value;
         PlayerPrefs.SetFloat("Volume_Value", Volume.value);
     }
+
     public void ResetButton()
     {
         Brightness.value = 0;
     }
-
 }

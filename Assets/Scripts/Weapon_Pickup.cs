@@ -3,9 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Weapon_Pickup : MonoBehaviour {
+    /*/<Summary>
+     * if the player presses z when on a Weapon - pick up the weapon and store it
+     * </Summary>
+     * <Logic>
+     * When on a BoxCollider2D trigger if pressed z - searching for the weapon storage in the player transform -> searching there for the weapon
+     * declaring it as owned
+     * </Logic>/*/
+
     public int Weapon_Index;
     Transform WeaponHeld;
-    int SelectedWeapon = 0;
+
     void OnTriggerStay2D(Collider2D other)
     {
         if (Input.GetKeyDown("z") && other.gameObject.tag == "Player")
@@ -26,22 +34,6 @@ public class Weapon_Pickup : MonoBehaviour {
                 }
             }
         }  
-    }
-    public void SelectWeapon()// going over all weapons in the the transform and selecting the weapon equals to the int "SelectedWeapon"
-    {
-        int i = 0;
-        foreach (Transform Weapon in WeaponHeld)
-        {
-            if (i == SelectedWeapon && Weapon.GetComponent<WeaponsBehaviour>().WeaponOwned)
-            {
-                Weapon.gameObject.SetActive(true);
-            }
-            else
-            {
-                Weapon.gameObject.SetActive(false);
-            }
-            i++;
-        }
     }
 }
 

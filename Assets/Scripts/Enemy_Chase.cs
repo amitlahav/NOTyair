@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class Enemy_Chase : MonoBehaviour 
 {
+    /*/<Summary>
+     * When the Player enters the Enemy
+     * Vision Sight - Vision Sight Biggens - Drop the patroling and starts chasing the player
+     * as long as he's still in the Sight area
+     * </Summary>
+     * <Logic>
+     * When Player enters the enemy vision sight BoxCollider2D trigger, This script gets activated
+     * Checking the player's position and changing the Enemy's velocity according to that (Left or Right)
+     * + if the Player's position on the Y axis is bigger than the enemies and the Player is not jumping -
+     * Enemy jumps to avoid an obstacle
+     * + if the Enemy is colliding with an object tagged "Wall" & is Chasing Player - Jump with current X axis velocity
+     * </Logic>/*/
+
     public float speed;
     private Rigidbody2D rb;
     SpriteRenderer Sprite;
