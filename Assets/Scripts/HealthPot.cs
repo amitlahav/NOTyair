@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class HealthPot : MonoBehaviour {
 
-    public int HealthPotValue;
-    public Health_System_Player PlayerHealth;
-
-    private void Update()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (Input.GetKeyDown("q") && UIManager.Potions>0)
+        if (collision.gameObject.tag == "Player")
         {
-            PlayerHealth.CurrentHealth++;
-            UIManager.Potions--;
+            UIManager.Potions++;
+            Destroy(transform.gameObject);
         }
     }
 }

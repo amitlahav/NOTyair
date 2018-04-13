@@ -24,8 +24,6 @@ public class Enemy_Patrol : MonoBehaviour {
         CurrentPosition = Enemy_body.position.x;
         NextMove = Random_Movement_Time;
         anim = GetComponent<Animator>();
-        Debug.Log(Random_Movement_Length);
-        Debug.Log(Random_Movement_Time);
     }
     void Update()
     {

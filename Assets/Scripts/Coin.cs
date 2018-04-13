@@ -8,7 +8,7 @@ public class Coin : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            UIManager.Score += 200;
+            UIManager.Score += 50;
             Destroy(this.gameObject);
         }    
     }

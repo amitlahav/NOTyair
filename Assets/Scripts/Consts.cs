@@ -11,4 +11,5 @@ public class Consts : MonoBehaviour
     public static int Game1 = 2;
     public static int Current_Scene = 1;
     public static int MAIN_MENU = 0;
+    public static int Bonus_Scene = 7; 
 }

@@ -36,7 +36,11 @@ public class Health_System_Player : MonoBehaviour {
     {
         if (CurrentHealth>MaxHealth)
         CurrentHealth = MaxHealth;
-        
+        if (Input.GetKeyDown("q") && UIManager.Potions > 0)
+        {
+            CurrentHealth++;
+            UIManager.Potions--;
+        }
     }
     void resetinvulnerability()
     {

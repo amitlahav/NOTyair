@@ -30,16 +30,9 @@ public class DeathUI : MonoBehaviour {
     public void Respawn()
     {
         Consts.Current_Scene = 1;
-        UIManager.Score /= 2;
+        UIManager.Score = 0;
         SceneManager.LoadScene(1);
         
     }
-    public IEnumerator ChangeScene(GameObject Player, int nextSceneIndex)
-    {
-        SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Additive);
-        Scene NextScene = SceneManager.GetSceneAt(1);
-        SceneManager.MoveGameObjectToScene(Player, NextScene);
-        yield return null;
-        SceneManager.UnloadSceneAsync(nextSceneIndex - 1);
-    }
+
 }

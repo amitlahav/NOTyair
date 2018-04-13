@@ -17,18 +17,18 @@ public class Enemy_Behaviour : MonoBehaviour
      * to avoid the fact that the Enemy dies in few frames and not just once
      * and by doing so making the drop system work only once as supposed to do
      * </Logic>*/
-        Rigidbody2D rb;
-        public GameObject HealthPot;
-        Animator anim;
-        bool TryDropped = false;
-        void Start()
+    Rigidbody2D rb;
+    public GameObject HealthPot;
+    Animator anim;
+    bool TryDroppedPotion = false;
+    void Start()
         {
             rb = GetComponent<Rigidbody2D>();
             anim = GetComponent<Animator>();
         }
         void Update()
         {
-        ItemDrop();   
+        ItemDrop();
         }
          void OnCollisionStay2D(Collision2D collision)
         {
@@ -44,11 +44,11 @@ public class Enemy_Behaviour : MonoBehaviour
         {
             int DropChance;
             DropChance = Random.Range(1, 100);
-            if (DropChance > 80&&TryDropped == false)
+            if (DropChance > 80&&TryDroppedPotion == false)
             {
                 UIManager.Potions++;
             }
-            TryDropped = true;
+            TryDroppedPotion = true;
         }
     }
 }

@@ -26,3 +26,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Game5.unity
     guid: 76ad089454076db4d82bf6762608bac1
+  - enabled: 1
+    path: Assets/Scenes/Bonus.unity
+    guid: fdce76b2f8658ad4fb224b0586b433b8

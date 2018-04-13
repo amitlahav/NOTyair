@@ -481,6 +481,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPot: {fileID: 1026064998132510, guid: 6ec3ca2e6b5a2be419a7af2f90902a66, type: 2}
+  WeaponHeld: {fileID: 114379276549657296, guid: 3f25a1fd5a9ea65469635cc24b584414,
+    type: 2}
 --- !u!114 &114926981543126084
 MonoBehaviour:
   m_ObjectHideFlags: 1

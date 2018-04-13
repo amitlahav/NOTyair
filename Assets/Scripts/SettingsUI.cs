@@ -20,14 +20,18 @@ public class SettingsUI : MonoBehaviour
      * #The Slider's Value is saved on "PlayerPrefs".
      * </Logic>*/
     public Slider Brightness;
-    //public Slider Volume;
-    //public Audio BgMusic;
+    public Slider Volume;
+    public AudioSource BgMusic;
     public GameObject Player_Panel;
     void Start()
     {
+        Volume.maxValue = 1f;
+        Volume.minValue = 0f;
+        Volume.value = 0.05f;
         Brightness.maxValue = 0.5f;
         Brightness.minValue = -0.5f;
         Brightness.value = PlayerPrefs.GetFloat("Brightness_Value");
+        Volume.value = PlayerPrefs.GetFloat("Volume_Value");
     }
     void Update()
     {
@@ -41,6 +45,8 @@ public class SettingsUI : MonoBehaviour
             Player_Panel.GetComponent<Image>().color = new Color(0, 0, 0, (Brightness.value)*-1);
             PlayerPrefs.SetFloat("Brightness_Value", (Brightness.value));
         }
+        BgMusic.GetComponent<AudioSource>().volume = Volume.value;
+        PlayerPrefs.SetFloat("Volume_Value", Volume.value);
     }
     public void ResetButton()
     {

@@ -54,7 +54,7 @@ public class Player_Movement : MonoBehaviour
         }
         rb.velocity = new Vector2(moveVelocity, rb.velocity.y);
         anim.SetFloat("Move", Input.GetAxisRaw("Horizontal"));
-        if (Input.GetKeyDown("w") && rb.velocity.y == 0)
+        if (Input.GetKey("w") && rb.velocity.y == 0)
         {   
             rb.velocity = new Vector2(rb.velocity.x, 3 * speed);
         }

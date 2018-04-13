@@ -9,7 +9,7 @@ public class WeaponSwitch : MonoBehaviour {
     public List<Transform> MainWeapon = new List<Transform>();// list of all transforms in weaponheld
     /*<Summary>
      * Code used to switch between the owned weapons
-     * of the player of which he picked during his playthrogh
+     * of the player of which he picked during his playthrough
      * </Summary>
      * <Logic>
      * Creating a list of all Weapons in the transform
@@ -19,8 +19,7 @@ public class WeaponSwitch : MonoBehaviour {
      * </Logic>*/
 
     void Start()
-    {
-        
+    { 
         foreach (Transform Weapon in transform)
         {
             MainWeapon.Add(Weapon);// adding weapons to list
@@ -32,7 +31,6 @@ public class WeaponSwitch : MonoBehaviour {
 
     void Update()
     {
-
         //For The UI - Taking the Ammo and Magazine from the current selectedWeapon and displays it
         Ammo = MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().Ammo;
         Magazine = MainWeapon[SelectedWeapon].GetComponent<WeaponsBehaviour>().Magazine;
@@ -59,20 +57,17 @@ public class WeaponSwitch : MonoBehaviour {
             }
         }
 
-
-            if (Input.GetKeyDown("o") && SelectedWeapon > 0)// same but for previous
-            {
-            int PreviousWeapon = SelectedWeapon - 1;
-            for (int i = PreviousWeapon; i >= 0; i--)
-            {
-                if (MainWeapon[i].GetComponent<WeaponsBehaviour>().WeaponOwned)
-                {
-                    
-                    SelectedWeapon = i; break;
-                }
+        if (Input.GetKeyDown("o") && SelectedWeapon > 0)// same but for previous
+        {
+        int PreviousWeapon = SelectedWeapon - 1;
+        for (int i = PreviousWeapon; i >= 0; i--)
+         {
+            if (MainWeapon[i].GetComponent<WeaponsBehaviour>().WeaponOwned)
+            {               
+                SelectedWeapon = i; break;
             }
-            }
-
+         }
+        }
         SelectWeapon();// select weapon
     }
 

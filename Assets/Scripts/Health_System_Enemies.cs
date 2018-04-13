@@ -46,7 +46,6 @@ public class Health_System_Enemies : MonoBehaviour {
     void Death()
     {
         anim.SetTrigger("Die");
-        Debug.Log(2);
         Destroy(rb.gameObject, DeathAnimation.length);
         UIManager.Score += Enemy_Score_Worth;
     }

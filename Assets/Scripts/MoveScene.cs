@@ -10,9 +10,9 @@ public class MoveScene : MonoBehaviour {
     {
         if (!load)
         {
-            load = true;
             if (other.gameObject.tag == "Player")
             {
+                load = true;
                 SpawnPoint = new Vector2(other.transform.position.x,other.transform.position.y);
                 StartCoroutine(ChangeScene(other.gameObject, Consts.Current_Scene+1));
                 Consts.Current_Scene++;
