@@ -26,7 +26,7 @@ public class WeaponSwitch : MonoBehaviour {
         {
             MainWeapon.Add(Weapon);// adding weapons to list
         }
-        MainWeapon[0].GetComponent<WeaponsBehaviour>().WeaponOwned = true;// determaning first weapon as main weapon and declaring him as owned
+        MainWeapon[0].GetComponent<WeaponsBehaviour>().WeaponOwned = true;// determining first weapon as main weapon and declaring him as owned
         SelectWeapon();// selecting first weapon
     }
 

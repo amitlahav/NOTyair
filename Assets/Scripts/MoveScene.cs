@@ -17,6 +17,10 @@ public class MoveScene : MonoBehaviour {
                 load = true;
                 SpawnPoint = new Vector2(other.transform.position.x,other.transform.position.y);
                 StartCoroutine(ChangeScene(other.gameObject, Consts.Current_Scene+1));
+                UIManager.ScoreRemoved = UIManager.Score;
+                UIManager.Time_From_LastLoad = UIManager.Time_FromLoad;
+                UIManager.Moved_Scene = true;
+                UIManager.Time_FromLoad = 0;
                 Consts.Current_Scene++;
                 Debug.Log(Consts.Current_Scene);
             }

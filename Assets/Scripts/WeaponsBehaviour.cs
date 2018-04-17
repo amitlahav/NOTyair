@@ -5,7 +5,7 @@ using UnityEngine;
 public class WeaponsBehaviour : MonoBehaviour
 {
     /*/<Summary
-     * Setting everyone weapon's Ammo - Damage - Max Magazine - Magazine - If Owned - Fire Rate - Reload Time
+     * Setting the weapon's Ammo - Damage - Max Magazine - Magazine - If Owned - Fire Rate - Reload Time
      * Reloading a weapon
      * </Summary>
      * <Logic>
