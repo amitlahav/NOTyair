@@ -19,10 +19,10 @@ public class Enemy_Behaviour : MonoBehaviour
      * </Logic>*/
     public GameObject HealthPot;
     Animator anim;
-    bool TryDroppedPotion = false;
-    void Start()
+    bool TryDropped = false;
+        void Start()
         {
-            anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>();
         }
         void Update()
         {
@@ -42,11 +42,11 @@ public class Enemy_Behaviour : MonoBehaviour
         {
             int DropChance;
             DropChance = Random.Range(1, 100);
-            if (DropChance > 80&&TryDroppedPotion == false)
+            if (DropChance > 80&&TryDropped == false)
             {
                 UIManager.Potions++;
             }
-            TryDroppedPotion = true;
+            TryDropped = true;
         }
     }
 }

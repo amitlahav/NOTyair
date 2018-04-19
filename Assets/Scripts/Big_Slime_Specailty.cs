@@ -24,7 +24,6 @@ public class Big_Slime_Specailty : MonoBehaviour {
         if (Big_Slime.Health <= 0&&EnemyMade == false)
         {
             
-            Debug.Log("x");
             Instantiate(original: Small_Slime, position:new Vector3(transform.position.x+2,transform.position.y,transform.position.z), rotation: transform.rotation);
             Instantiate(original: Small_Slime, position: new Vector3(transform.position.x - 2, transform.position.y, transform.position.z), rotation: transform.rotation);
             EnemyMade = true;

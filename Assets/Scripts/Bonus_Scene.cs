@@ -19,6 +19,7 @@ public class Bonus_Scene : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3))
         {
+            UIManager.Bonus_Score = UIManager.Score;
             StartCoroutine(ChangeScene(collision.gameObject, Consts.Bonus_Scene));
         }
         else if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(7))
@@ -30,6 +31,7 @@ public class Bonus_Scene : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
+            UIManager.Score = UIManager.Bonus_Score;
             StartCoroutine(ChangeScene(collision.gameObject, Consts.Current_Scene));
         }
     }

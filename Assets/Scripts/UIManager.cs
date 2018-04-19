@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour {
     public static int Time_From_LastLoad;
     public static bool Moved_Scene = false;
     public static int ScoreRemoved;
+    public static int Bonus_Score = 0;
 
     public void Start()
     {
@@ -46,7 +47,7 @@ public class UIManager : MonoBehaviour {
         Potion_Inv.text = "X" + Potions;
         if (Moved_Scene)
         {
-            if (Score != (ScoreRemoved - (Time_From_LastLoad * 10)))
+            if (Score != (ScoreRemoved - (Time_From_LastLoad * 5)))
             {
                 Score--;
             }

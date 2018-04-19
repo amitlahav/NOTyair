@@ -1373,7 +1373,7 @@ MonoBehaviour:
   Leftshotspawn: {fileID: 4378499776400118}
   Rightshot: {fileID: 1081392809929494, guid: b70561dcb6635a94c80910aa5eab3b2a, type: 2}
   Rightshotspawn: {fileID: 4624474568222684}
-  Damage: 14
+  Damage: 19
   WeaponOwned: 0
   Weapon_Index: 2
   Ammo: 90
@@ -1717,7 +1717,7 @@ MonoBehaviour:
   Leftshotspawn: {fileID: 4378499776400118}
   Rightshot: {fileID: 1704089509987362, guid: 0f7d3447aaf6c4441ae0a8e387453b2c, type: 2}
   Rightshotspawn: {fileID: 4624474568222684}
-  Damage: 30
+  Damage: 34
   WeaponOwned: 0
   Weapon_Index: 3
   Ammo: 36
@@ -2632,7 +2632,7 @@ MonoBehaviour:
   Leftshotspawn: {fileID: 4378499776400118}
   Rightshot: {fileID: 1845709222321914, guid: 7035e4213a1e4c7419585acb0579e678, type: 2}
   Rightshotspawn: {fileID: 4624474568222684}
-  Damage: 12
+  Damage: 17
   WeaponOwned: 0
   Weapon_Index: 1
   Ammo: 90
@@ -2928,7 +2928,7 @@ MonoBehaviour:
   Leftshotspawn: {fileID: 4378499776400118}
   Rightshot: {fileID: 1184649325481594, guid: 77cc9a22a638057458af4fb597840b83, type: 2}
   Rightshotspawn: {fileID: 4624474568222684}
-  Damage: 12
+  Damage: 18
   WeaponOwned: 0
   Weapon_Index: 0
   Ammo: 30

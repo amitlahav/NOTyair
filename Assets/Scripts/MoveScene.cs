@@ -8,11 +8,14 @@ public class MoveScene : MonoBehaviour {
 
     bool load = false;
     public Vector2 SpawnPoint;
+    public GameObject PlayerUI;
+    public GameObject[] Questions = new GameObject[Consts.QuestionsAmount];
+    public static int QuestionCounter = 1;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (!load)
         {
-            if (other.gameObject.tag == "Player")
+            if (other.gameObject.tag == "Player" && GameObject.FindGameObjectWithTag("Enemy") == null)
             {
                 load = true;
                 SpawnPoint = new Vector2(other.transform.position.x,other.transform.position.y);
@@ -33,6 +36,14 @@ public class MoveScene : MonoBehaviour {
         SceneManager.MoveGameObjectToScene(Player, NextScene);
         yield return null;
         SceneManager.UnloadSceneAsync(nextSceneIndex-1);
+    }
+    public void Question(Collider2D other)
+    {
+        PlayerUI.SetActive(false);
+        Questions[QuestionCounter].SetActive(true);
+        QuestionCounter++;
+        PauseMenu.IsPaused = true;
+        Time.timeScale = 0f;
     }
 
 }

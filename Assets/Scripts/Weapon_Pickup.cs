@@ -30,7 +30,9 @@ public class Weapon_Pickup : MonoBehaviour {
             {
                 if (Weapon.GetComponent<WeaponsBehaviour>().Weapon_Index == Weapon_Index)
                 {
-                    Weapon.GetComponent<WeaponsBehaviour>().WeaponOwned = true; break;// declaring the weapon as owned
+                    Weapon.GetComponent<WeaponsBehaviour>().WeaponOwned = true;
+                    Weapon.GetComponent<WeaponsBehaviour>().Ammo += 50;
+                    break;// declaring the weapon as owned & adding 50 ammo
                 }
             }
         }  

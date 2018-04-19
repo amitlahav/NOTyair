@@ -37,6 +37,7 @@ public class WeaponsBehaviour : MonoBehaviour
     {
         WeaponSprite = GetComponent<SpriteRenderer>();
         Magazine = MaxMagazine;
+
     }
     void Update()
     {
