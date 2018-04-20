@@ -42,6 +42,11 @@ public class DeathUI : MonoBehaviour {
     {
         Consts.Current_Scene = 1;
         UIManager.Score = 0;
+        UIManager.Time_FromLoad = 0;
+        if (PlayerPrefs.GetInt("Question") == Consts.QuestionsAmount - 1)
+        {
+            PlayerPrefs.SetInt("Question", 0);
+        }
         SceneManager.LoadScene(1);  
     }
 }
