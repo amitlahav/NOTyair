@@ -13,7 +13,6 @@ public class QuestionUI : MonoBehaviour {
     private void Start()
     {
         CurrentQuestion = PlayerPrefs.GetInt("Question");
-       
     }
 
     public void CorrectAnwser()
