@@ -17,12 +17,12 @@ public class Bonus_Scene : MonoBehaviour {
      * </Logic>/*/
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(3))
+        if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(Consts.Game2))
         {
             UIManager.Bonus_Score = UIManager.Score;
             StartCoroutine(ChangeScene(collision.gameObject, Consts.Bonus_Scene));
         }
-        else if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(7))
+        else if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(Consts.Bonus_Scene))
         {
             StartCoroutine(ChangeScene(collision.gameObject, Consts.Current_Scene));
         }

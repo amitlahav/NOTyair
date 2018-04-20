@@ -13,7 +13,7 @@ public class MoveScene : MonoBehaviour {
     {
         if (!load)
         {
-            if (other.gameObject.tag == "Player" /*&& GameObject.FindGameObjectWithTag("Enemy") == null*/)
+            if (other.gameObject.tag == "Player" && GameObject.FindGameObjectWithTag("Enemy") == null)
             {
                 load = true;
                 other.gameObject.transform.position = SpawnPoint;
