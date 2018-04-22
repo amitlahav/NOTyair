@@ -9,7 +9,7 @@ public class StartGame : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(Consts.Game1);
         }
     }
 }
