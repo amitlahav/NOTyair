@@ -19,8 +19,6 @@ public class Platform_Generator : MonoBehaviour {
     public Transform GenerationPoint_1;
     public Transform GenerationPoint_2;
     public Transform GenerationPoint_3;
-    public Camera Main_Camera;
-    public Camera Bonus_Camera;
     private float Time_Between;
     private int Random_Point;
     private int Previous_Point;
@@ -28,8 +26,6 @@ public class Platform_Generator : MonoBehaviour {
     void Start()
     {
         Time_Between = 1f;
-        Main_Camera.gameObject.SetActive(false);
-        Bonus_Camera.gameObject.SetActive(true);
     }
 
     public void Update()

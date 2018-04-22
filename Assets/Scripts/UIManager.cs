@@ -47,9 +47,9 @@ public class UIManager : MonoBehaviour {
         Potion_Inv.text = "X" + Potions;
         if (Moved_Scene)
         {
-            if (Score != (ScoreRemoved - (Time_From_LastLoad * 5)))
+            if (Score >= (ScoreRemoved - (Time_From_LastLoad * 5)))
             {
-                Score--;
+                Score-=10;
             }
             else
             {

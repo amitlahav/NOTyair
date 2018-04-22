@@ -12,11 +12,10 @@ public class Main_Menu : MonoBehaviour {
      * </Logic>/*/
     public void Start()
     {
-        Consts.Current_Scene = PlayerPrefs.GetInt("Scene");
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene(Consts.Current_Scene);
+        SceneManager.LoadScene(Consts.Game1);
     }
     public void QuitGame()
     {

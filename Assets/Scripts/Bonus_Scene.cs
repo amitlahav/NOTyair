@@ -15,16 +15,22 @@ public class Bonus_Scene : MonoBehaviour {
      * On collision with the door or game boundry starting the
      * Courtine from MoveScene.cs 
      * </Logic>/*/
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(Consts.Game2))
         {
             UIManager.Bonus_Score = UIManager.Score;
-            StartCoroutine(ChangeScene(collision.gameObject, Consts.Bonus_Scene));
+            collision.gameObject.transform.position = new Vector2(-180.3675f, 217.6451f);
+            ChangeToBonusCamera(collision.gameObject);
+            Destroy(transform.gameObject);
+            StartCoroutine(ChangeToBonusScene(collision.gameObject, Consts.Bonus_Scene));
         }
         else if (collision.gameObject.tag == "Player" && SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(Consts.Bonus_Scene))
         {
-            StartCoroutine(ChangeScene(collision.gameObject, Consts.Current_Scene));
+            collision.gameObject.transform.position = new Vector2(-130.3026f, 23.9669f);
+            ChangeToMainCamera(collision.gameObject);
+            StartCoroutine(LeaveBonusScene(Consts.Bonus_Scene));
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -32,16 +38,48 @@ public class Bonus_Scene : MonoBehaviour {
         if (collision.gameObject.tag == "Player")
         {
             UIManager.Score = UIManager.Bonus_Score;
-            StartCoroutine(ChangeScene(collision.gameObject, Consts.Current_Scene));
+            collision.gameObject.transform.position = new Vector2(-130.3026f, 23.9669f);
+            ChangeToMainCamera(collision.gameObject);
+            StartCoroutine(LeaveBonusScene(Consts.Bonus_Scene));
         }
     }
 
-    public IEnumerator ChangeScene(GameObject Player, int nextSceneIndex) // copied from the MoveScene Script
+    public IEnumerator ChangeToBonusScene(GameObject Player, int BonusScene)
     {
-        SceneManager.LoadScene(nextSceneIndex, LoadSceneMode.Additive);
-        Scene NextScene = SceneManager.GetSceneAt(1);
-        SceneManager.MoveGameObjectToScene(Player, NextScene);
+        SceneManager.LoadScene(BonusScene, LoadSceneMode.Additive);
         yield return null;
-        SceneManager.UnloadSceneAsync(nextSceneIndex - 1);
+    }
+    public IEnumerator LeaveBonusScene(int BonusScene)
+    {
+        SceneManager.UnloadSceneAsync(BonusScene);
+        yield return null;
+    }
+    public void ChangeToBonusCamera(GameObject Player)
+    {
+        foreach (Transform Children in Player.transform)
+        {
+            if (Children.name == "Bonus_Camera")
+            {
+                Children.gameObject.SetActive(true);
+            }
+            if (Children.name == "Main Camera")
+            {
+                Children.gameObject.SetActive(false);
+            }
+        }
+    }
+    public void ChangeToMainCamera(GameObject Player)
+    {
+        foreach (Transform Children in Player.transform)
+        {
+            if (Children.name == "Bonus_Camera")
+            {
+                Children.gameObject.SetActive(false);
+            }
+            if (Children.name == "Main Camera")
+            {
+                Children.gameObject.SetActive(true);
+            }
+        }
     }
 }
