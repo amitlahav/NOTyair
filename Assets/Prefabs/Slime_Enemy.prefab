@@ -277,7 +277,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665919e570f77534694f67c209c6de64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.5
+  speed: 2
   Slime: {fileID: 1662575772138892}
 --- !u!114 &114530640256995624
 MonoBehaviour:
@@ -338,7 +338,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a957ee2e445a8ed43a3c5be7bff626f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 50
+  MaxHealth: 60
   Health: 0
   DeathAnimation: {fileID: 7400000, guid: 60c9f2a3312ba834c9afc04619a71421, type: 2}
   Enemy_Score_Worth: 50
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff15220451fea994c9fa8b9d2fc8148b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 1.2
   Detection: {fileID: 114915656381448764}
 --- !u!114 &114682702354190482
 MonoBehaviour:
@@ -453,7 +453,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPot: {fileID: 1026064998132510, guid: 6ec3ca2e6b5a2be419a7af2f90902a66, type: 2}
-  Weapon: {fileID: 114379276549657296, guid: 3f25a1fd5a9ea65469635cc24b584414, type: 2}
 --- !u!114 &114768670031727046
 MonoBehaviour:
   m_ObjectHideFlags: 1

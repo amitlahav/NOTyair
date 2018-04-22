@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665919e570f77534694f67c209c6de64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.1
+  speed: 1.4
   Slime: {fileID: 1746957757366384}
 --- !u!114 &114330328573607928
 MonoBehaviour:
@@ -336,8 +336,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a957ee2e445a8ed43a3c5be7bff626f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MaxHealth: 250
-  Health: 250
+  MaxHealth: 280
+  Health: 280
   DeathAnimation: {fileID: 7400000, guid: 60c9f2a3312ba834c9afc04619a71421, type: 2}
   Enemy_Score_Worth: 350
 --- !u!114 &114411798141229896
@@ -481,7 +481,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HealthPot: {fileID: 1026064998132510, guid: 6ec3ca2e6b5a2be419a7af2f90902a66, type: 2}
-  Weapon: {fileID: 0}
 --- !u!114 &114926981543126084
 MonoBehaviour:
   m_ObjectHideFlags: 1
