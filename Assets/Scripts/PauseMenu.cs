@@ -74,6 +74,7 @@ public class PauseMenu : MonoBehaviour {
     public void QuitToMainMenu()
     {
         Time.timeScale = 1f;
+        Consts.Current_Scene = Consts.Game1;
         SceneManager.LoadScene(Consts.MAIN_MENU);
     }
 }

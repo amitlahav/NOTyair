@@ -40,7 +40,7 @@ public class DeathUI : MonoBehaviour {
     }
     public void Respawn()
     {
-        Consts.Current_Scene = 1;
+        Consts.Current_Scene = Consts.Game1;
         UIManager.Score = 0;
         if (PlayerPrefs.GetInt("Question") == Consts.QuestionsAmount - 1)
         {
