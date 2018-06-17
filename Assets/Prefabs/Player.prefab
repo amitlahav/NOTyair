@@ -767,7 +767,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1399366633010972
 GameObject:
   m_ObjectHideFlags: 1
@@ -2189,7 +2189,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1300960230463712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.623993, y: 0.8050884, z: 0}
+  m_LocalPosition: {x: -1.37, y: -2.17, z: 0}
   m_LocalScale: {x: 5.007544, y: 4.8439703, z: 1}
   m_Children:
   - {fileID: 4708112542761206}
@@ -2994,7 +2994,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 22
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -3005,7 +3005,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer1
+  m_Text: human kills the pest on his own
 --- !u!114 &114082347934954852
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3220,7 +3220,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114096567252832392}
-        m_MethodName: WrongAnwser
+        m_MethodName: CorrectAnwser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3301,7 +3301,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 21
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -3312,7 +3312,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Anwser2
+  m_Text: natural predator sent to exterminate
 --- !u!114 &114133131351548124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3433,7 +3433,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 182
+    m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -3444,7 +3444,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Information
+  m_Text: how does Biological pest control works?
 --- !u!114 &114174554502119832
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3906,7 +3906,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 182
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -3917,7 +3917,13 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Information
+  m_Text: "Fumigation is a method of pest control that completely fills an area with
+    gaseous pesticides\u2014or fumigants\u2014to suffocate or poison the pests within.
+    It is used to control pests in buildings (structural fumigation), soil, grain,
+    and produce, and is also used during processing of goods to be imported or exported
+    to prevent transfer of exotic organisms. This method also affects the structure
+    itself, affecting pests that inhabit the physical structure, such as woodborers
+    and drywood termites."
 --- !u!114 &114291889396172000
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4034,7 +4040,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 17
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -4045,7 +4051,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer1
+  m_Text: When you want to affect pests that inhabit physical structures
 --- !u!114 &114343822603709886
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4146,7 +4152,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 21
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -4157,7 +4163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer3
+  m_Text: "Human sends diseases onto the pests.\r\n"
 --- !u!114 &114364535877289054
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4464,7 +4470,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 182
+    m_FontSize: 42
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -4475,7 +4481,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Information
+  m_Text: Biological control or biocontrol is a method of controlling pests such as
+    insects, mites, weeds and plant diseases using other organisms. It relies on predation,
+    parasitism, herbivory, or other natural mechanisms, but typically also involves
+    an active human management role.
 --- !u!114 &114428219184426264
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4787,7 +4796,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 21
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -4798,7 +4807,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer3
+  m_Text: when large amounts of pests present.
 --- !u!114 &114511394450403336
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4939,7 +4948,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 182
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -4950,7 +4959,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Information
+  m_Text: what is the purpose of Pheromone Traps?
 --- !u!114 &114549753973853896
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4972,7 +4981,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 182
+    m_FontSize: 28
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -4983,7 +4992,14 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Information
+  m_Text: 1.Forest pests present a significant problem because it is not easy to access
+    the canopy and monitor pest populations. In addition, forestry pests such as bark
+    beetles, kept under control by natural enemies in their native range, may be transported
+    large distances in cut timber to places where they have no natural predators,
+    enabling them to cause extensive economic damage. Pheromone traps have been used
+    to monitor pest populations in the canopy. These release volatile chemicals that
+    attract males. Pheromone traps can detect the arrival of pests or alert foresters
+    to outbreaks.
 --- !u!114 &114549820251220948
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -5212,7 +5228,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114096567252832392}
-        m_MethodName: CorrectAnwser
+        m_MethodName: WrongAnwser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5716,7 +5732,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114096567252832392}
-        m_MethodName: CorrectAnwser
+        m_MethodName: WrongAnwser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5911,7 +5927,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 182
+    m_FontSize: 43
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
@@ -5922,7 +5938,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Information
+  m_Text: when is the Fumigation method neccessary?
 --- !u!114 &114762184142230144
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6129,7 +6145,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 18
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -6140,7 +6156,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer1
+  m_Text: exterminate forestry pests
 --- !u!114 &114794112634813064
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6205,7 +6221,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 114096567252832392}
-        m_MethodName: WrongAnwser
+        m_MethodName: CorrectAnwser
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6398,7 +6414,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 20
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -6409,7 +6425,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Anwser2
+  m_Text: Control pests in buildings
 --- !u!114 &114842733402707788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6491,7 +6507,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 16
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -6502,7 +6518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Answer3
+  m_Text: monitor pest populations in the canopy
 --- !u!114 &114870645496273556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6975,7 +6991,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 52
+    m_FontSize: 17
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 10
@@ -6986,7 +7002,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Anwser2
+  m_Text: it's the natural enemy of the bark beetles
 --- !u!114 &114952275608089478
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -9052,7 +9068,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0006485, y: 167}
+  m_AnchoredPosition: {x: 0.0000076308, y: 96.5}
   m_SizeDelta: {x: 920, y: 334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224347749864950980
@@ -9106,7 +9122,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0006485, y: 167}
+  m_AnchoredPosition: {x: 0.0000076308, y: 96.5}
   m_SizeDelta: {x: 920, y: 334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224385577889902498
@@ -9197,7 +9213,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0006485, y: 167}
+  m_AnchoredPosition: {x: 0.0000076308, y: 96.5}
   m_SizeDelta: {x: 920, y: 334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224411565231922154
@@ -9353,7 +9369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0006485, y: 167}
+  m_AnchoredPosition: {x: 0.0000076308, y: 90}
   m_SizeDelta: {x: 920, y: 334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224493718552201586
@@ -9411,8 +9427,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0006485, y: 167}
-  m_SizeDelta: {x: 920, y: 334}
+  m_AnchoredPosition: {x: 0.64998, y: 152.5}
+  m_SizeDelta: {x: 842.6, y: 222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224522036040858644
 RectTransform:
@@ -9599,7 +9615,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0006485, y: 167}
+  m_AnchoredPosition: {x: 0.0000076308, y: 91}
   m_SizeDelta: {x: 920, y: 334}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224638437516151508

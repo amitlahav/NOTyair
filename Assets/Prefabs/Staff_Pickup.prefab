@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4864926483608312}
   - component: {fileID: 212755735726853784}
   - component: {fileID: 114026529463904700}
+  - component: {fileID: 61031991472562306}
   m_Layer: 0
   m_Name: Staff_Pickup
   m_TagString: Untagged
@@ -35,12 +36,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1867453135292324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.128, y: 26.178, z: 0}
+  m_LocalPosition: {x: -178.81, y: 217.13, z: 0}
   m_LocalScale: {x: 5.2138624, y: 3.1187088, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &61031991472562306
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1867453135292324}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.033333346, y: 0.038888887}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0.099999994, w: 0.06}
+    pivot: {x: 0.43055555, y: 0.41898146}
+    oldSize: {x: 0.48, y: 0.48}
+    newSize: {x: 0.48, y: 0.48}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.48, y: 0.48}
+  m_EdgeRadius: 0
 --- !u!114 &114026529463904700
 MonoBehaviour:
   m_ObjectHideFlags: 1

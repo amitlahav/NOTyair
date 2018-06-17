@@ -9,6 +9,7 @@ public class StartGame : MonoBehaviour {
     {
         if (collision.gameObject.tag == "Player")
         {
+            UIManager.Score = 0;
             SceneManager.LoadScene(Consts.Game1);
         }
     }

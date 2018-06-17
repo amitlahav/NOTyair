@@ -34,7 +34,7 @@ public class Platform_Generator : MonoBehaviour {
         if (Time.time > Time_Between)
         {
             Time_Between = Time.time + 2f;
-            Random_Point = Random.Range(1, 4);
+            Random_Point = Random.Range(1, 3);
             if (Random_Point == 1)
             {
                 Instantiate(original: Platform, position: GenerationPoint_1.position, rotation: GenerationPoint_1.rotation);

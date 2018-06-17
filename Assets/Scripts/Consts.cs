@@ -13,6 +13,6 @@ public class Consts : MonoBehaviour
     public static int Game1 = 2;
     public static int Current_Scene = 2;
     public static int MAIN_MENU = 0;
-    public static int Bonus_Scene = 5;
+    public static int Bonus_Scene = 6;
     public static int QuestionsAmount = 5;
 }

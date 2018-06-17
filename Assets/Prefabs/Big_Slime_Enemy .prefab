@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 665919e570f77534694f67c209c6de64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1.4
+  speed: 1.3
   Slime: {fileID: 1746957757366384}
 --- !u!114 &114330328573607928
 MonoBehaviour:
